@@ -34,6 +34,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *.mp3 rss.xml
-          git commit -m "Audio y RSS diarios generados con IA" || exit 0
+          git add *.mp3 rss.xml || true
+          git commit -m "Audio y RSS diarios generados automáticamente" || exit 0
           git push
