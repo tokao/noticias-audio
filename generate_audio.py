@@ -148,8 +148,8 @@ FORMATO DE RESPUESTA (exacto)
 GUION:
 (el texto completo para leer en voz alta)
 FUENTES:
-(una línea por noticia citada, con siete campos separados por barras verticales)
-S1 | Sección exacta | Frase exacta del guion de 8 a 80 palabras que identifica la noticia | Medio | URL directa | Fecha de publicación o actualización de la fuente en formato AAAA-MM-DD | Evidencia literal de 12 a 60 palabras copiada del contenido de esa página
+(una línea por noticia citada, con ocho campos separados por barras verticales)
+S1 | Sección exacta | Frase exacta del guion de 8 a 80 palabras que identifica la noticia | Medio | URL directa | Fecha de publicación o actualización de la fuente en formato AAAA-MM-DD | Evidencia literal de 12 a 60 palabras copiada del contenido de esa página | Traducción española literal de la evidencia de 12 a 80 palabras
 No uses barras verticales dentro de los campos. Cada afirmación concreta del guion debe quedar
 vinculada a una línea S y cada S debe aparecer una vez como `[S#]` en el guion. No incluyas líneas
 de fuente que no respalden una noticia del guion.
