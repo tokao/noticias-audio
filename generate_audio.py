@@ -6,76 +6,69 @@ from datetime import datetime, timezone
 import urllib.request
 import google.generativeai as genai
 
-# Fuentes de noticias en vivo para alimentar a Gemini
+# Fuentes de noticias para nutrir a la IA
 FUENTES_RSS = {
     "España y Mundo": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-    "Economía y Mercados": "https://cincodias.elpais.com/rss/cincodias/portada.xml",
+    "Economía": "https://cincodias.elpais.com/rss/cincodias/portada.xml",
     "Suiza y Ginebra": "https://www.swissinfo.ch/spa/rss/index.xml"
 }
 
-def recolectar_noticias_frescas():
-    """Descarga los titulares reales del día para dárselos a Gemini."""
+def recolectar_noticias():
     texto_noticias = ""
     for categoria, url in FUENTES_RSS.items():
         try:
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
             xml_data = urllib.request.urlopen(req, timeout=10).read()
             root = ET.fromstring(xml_data)
-            items = root.findall('.//item')[:5]
-            
-            texto_noticias += f"\n--- TITULARES DE {categoria.upper()} ---\n"
+            items = root.findall('.//item')[:4]
+            texto_noticias += f"\n--- {categoria.upper()} ---\n"
             for item in items:
                 title = item.find('title')
-                desc = item.find('description')
-                t_text = title.text.strip() if title is not None and title.text else ""
-                d_text = desc.text.strip() if desc is not None and desc.text else ""
-                texto_noticias += f"- {t_text}: {d_text}\n"
+                if title is not None and title.text:
+                    texto_noticias += f"- {title.text.strip()}\n"
         except Exception as e:
-            print(f"Error descargando {categoria}: {e}")
-            
+            print(f"Error cargando {categoria}: {e}")
     return texto_noticias
 
-def obtener_briefing_ia():
+def obtener_briefing():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError("Error: La variable GEMINI_API_KEY no está configurada en los Secrets de GitHub.")
+        raise ValueError("No se encontró la clave GEMINI_API_KEY en las variables de entorno de GitHub.")
 
-    # 1. Obtenemos la información en tiempo real
-    noticias_contexto = recolectar_noticias_frescas()
-    fecha_hoy = datetime.now().strftime("%d de %B de %Y")
+    noticias = recolectar_noticias()
+    fecha_hoy = datetime.now().strftime("%d/%m/%Y")
 
-    # 2. Construimos el prompt con los datos reales incluidos
     prompt = f"""
-Actúa como un locutor de radio profesional. Tu tarea es redactar un boletín diario de noticias en español largo, fluido y detallado para ser leído en voz alta.
+Actúa como un locutor de radio profesional. Redacta un boletín diario de noticias extenso y fluido en español para ser leído en voz alta.
 
-Utiliza la siguiente información de última hora recopilada hoy ({fecha_hoy}):
+Utiliza como base estos titulares de hoy ({fecha_hoy}):
+{noticias}
 
-{noticias_contexto}
+REQUISITO DE LONGITUD: El texto debe tener entre 600 y 800 palabras (duración de 3 a 5 minutos hablados).
 
-ESTRUCTURA OBLIGATORIA DEL BOLETÍN (debe tener una longitud total de entre 600 y 800 palabras para durar entre 3 y 5 minutos hablados):
-1. INTRODUCCIÓN: Saludo cordial de buenos días y presentación del boletín del {fecha_hoy}.
-2. RESUMEN EJECUTIVO: Analiza y desarrolla los 4 titulares más importantes extraídos de los datos anteriores.
-3. ESPAÑA Y MUNDO: Desarrolla las noticias internacionales y nacionales con contexto periodístico amplio.
+ESTRUCTURA DEL BOLETÍN:
+1. INTRODUCCIÓN: Saludo inicial y fecha.
+2. RESUMEN EJECUTIVO: 4 puntos clave desarrollados.
+3. ESPAÑA Y MUNDO: Noticias internacionales y de España detalladas.
 4. ACTUALIDAD LOCAL:
-   - Barcelona y Bilbao: Comenta la actualidad y noticias relevantes de ambas regiones.
-   - Ginebra y Pays de Gex: Resume las novedades de Suiza/Ginebra e incluye una sugerencia cultural o de agenda local para hoy o los próximos días.
-5. ECONOMÍA Y MERCADOS: Estado general de los mercados (menciona la evolución del Euro, Franco Suizo y Bolsas).
-6. CIERRE: Despedida breve y profesional deseando un buen día a los oyentes.
+   - Barcelona y Bilbao: Estado y noticias de ambas regiones.
+   - Ginebra y Pays de Gex: Actualidad suiza e incluye una recomendación de agenda cultural para los próximos días.
+5. MERCADOS FINANCIEROS: Situación económica, EUR/USD, EUR/CHF y bolsas.
+6. CIERRE: Despedida profesional.
 
-REGLAS DE FORMATO PARA SÍNTESIS DE VOZ:
-- No uses caracteres Markdown como '#', '*', '-', ni enlaces o URLs.
-- Escribe todos los números largos o símbolos con letras (ejemplo: "cincuenta por ciento" en vez de "50%", "euros" en vez de "€").
-- Escribe en párrafos continuos y con puntuación clara para favorecer las pausas naturales de lectura.
+REGLAS DE AUDIO:
+- No uses Markdown (#, *, -), ni caracteres especiales, ni URLs.
+- Escribe los números con palabras para facilitar la lectura.
+- Redacta párrafos naturales con puntuación clara.
 """
 
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-1.5-flash')
-    
     response = model.generate_content(prompt)
-    texto_final = response.text.strip()
     
-    print(f"ÉXITO: Generado boletín con {len(texto_final)} caracteres.")
-    return texto_final
+    texto = response.text.strip()
+    print(f"Texto generado con éxito: {len(texto)} caracteres.")
+    return texto
 
 def actualizar_rss(filename_mp3, fecha_str):
     rss_file = "rss.xml"
@@ -113,7 +106,7 @@ def actualizar_rss(filename_mp3, fecha_str):
             f.write(full_rss)
 
 async def main():
-    texto = obtener_briefing_ia()
+    texto = obtener_briefing()
     fecha_hoy_str = datetime.now().strftime("%Y-%m-%d")
     filename_mp3 = f"boletin_{fecha_hoy_str}.mp3"
     
