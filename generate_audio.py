@@ -108,7 +108,7 @@ async def main():
     fecha_hoy_str = datetime.now().strftime("%Y-%m-%d")
     filename_mp3 = f"boletin_{fecha_hoy_str}.mp3"
     
-    communicate = edge_tts.Communicate(texto, "es-ES-AlvaroNeural")
+    communicate = edge_tts.Communicate(texto, "es-ES-ElviraNeural")
     await communicate.save(filename_mp3)
     
     actualizar_rss(filename_mp3, fecha_hoy_str)
