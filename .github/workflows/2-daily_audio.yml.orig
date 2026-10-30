@@ -1,0 +1,48 @@
+name: Generar Audio y RSS Diario
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC = 07:00 en Ginebra (08:00 en verano)
+  workflow_dispatch:
+
+concurrency:
+  group: daily-audio
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade edge-tts
+
+      - name: Generar audio y actualizar RSS
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VOICE: es-ES-ElviraNeural
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python generate_audio.py
+
+      - name: Guardar audio y RSS en GitHub
+        run: |
+          touch .nojekyll
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A episodes rss.xml episodes.json guion_ultimo.txt .nojekyll
+          git commit -m "Episodio diario $(date -u +%F)" || exit 0
+          git push
