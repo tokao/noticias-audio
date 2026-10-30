@@ -11,7 +11,7 @@ import edge_tts
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # Configuración de voz para edge-tts
-VOICE = "es-ES-AlvaroNeural"  # Opciones: "es-ES-ElviraNeural", "es-MX-JorgeNeural", etc.
+VOICE = "es-ES-AlvaroNeural"
 AUDIO_FILE = "noticias.mp3"
 RSS_FILE = "rss.xml"
 
@@ -76,4 +76,49 @@ async def generar_audio(texto):
 
 
 def actualizar_rss(texto_briefing):
-    """Genera o actualiza el archivo
+    """Genera o actualiza el archivo rss.xml."""
+    print("Actualizando rss.xml...")
+    fecha_actual = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")
+    
+    # Limpiamos caracteres que puedan romper el XML
+    texto_limpio = texto_briefing.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    
+    rss_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Noticias Diarias Audio</title>
+    <link>https://github.com/tokao/noticias-audio</link>
+    <description>Briefing diario de noticias en audio</description>
+    <language>es</language>
+    <lastBuildDate>{fecha_actual}</lastBuildDate>
+    <item>
+      <title>Briefing Diario - {fecha_actual}</title>
+      <description>{texto_limpio[:200]}...</description>
+      <pubDate>{fecha_actual}</pubDate>
+      <enclosure url="noticias.mp3" type="audio/mpeg" />
+    </item>
+  </channel>
+</rss>"""
+
+    with open(RSS_FILE, "w", encoding="utf-8") as f:
+        f.write(rss_content)
+    print("RSS actualizado exitosamente.")
+
+
+async def main():
+    print("Obteniendo texto del briefing...")
+    texto = obtener_briefing()
+    print("Briefing generado con éxito:")
+    print("-" * 40)
+    print(texto)
+    print("-" * 40)
+
+    # 1. Generar el archivo de audio MP3
+    await generar_audio(texto)
+
+    # 2. Actualizar el archivo RSS XML
+    actualizar_rss(texto)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
