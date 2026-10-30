@@ -1,141 +1,211 @@
+"""
+Briefing diario en audio (podcast) generado en GitHub Actions.
+
+La IA busca las noticias en internet y redacta el guion:
+  1) Groq "compound" (búsqueda web incluida)  -> secreto GROQ_API_KEY
+  2) Gemini con Búsqueda de Google            -> secreto GEMINI_API_KEY
+Se usa el primero que funcione. Voz: edge-tts. Feed: rss.xml en GitHub Pages.
+"""
 import asyncio
 import json
 import os
 import re
+import time
+import urllib.error
 import urllib.request
-import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import format_datetime
+from html import escape as html_escape
 from xml.sax.saxutils import escape
+from zoneinfo import ZoneInfo
 
 import edge_tts
 
 # --- Configuración ---------------------------------------------------------
-# URL pública donde se sirve el repo (GitHub Pages). Sin barra final.
 BASE_URL = os.environ.get("BASE_URL", "https://tokao.github.io/noticias-audio").rstrip("/")
-# Modelos gratuitos de GitHub Models, en orden de preferencia
-GITHUB_MODELS = os.environ.get("GITHUB_MODELS", "openai/gpt-4.1,openai/gpt-4o-mini").split(",")
-VOICE = os.environ.get("VOICE", "es-ES-AlvaroNeural")
-RATE = os.environ.get("RATE", "-5%")  # algo más pausado que el ritmo por defecto
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "groq/compound")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+VOICE = os.environ.get("VOICE", "es-ES-ElviraNeural")
+RATE = os.environ.get("RATE", "-5%")
+TZ = ZoneInfo("Europe/Zurich")
 
-EPISODES_DIR = "episodes"        # aquí van los mp3, uno por día
-EPISODES_JSON = "episodes.json"  # historial de episodios (para regenerar el feed)
+EPISODES_DIR = "episodes"
+EPISODES_JSON = "episodes.json"
 RSS_FILE = "rss.xml"
-MAX_EPISODES = 30                # se borran los más antiguos para no inflar el repo
+GUION_FILE = "guion_ultimo.txt"   # último guion, para revisar qué se ha leído
+MAX_EPISODES = 30
 
 PODCAST_TITLE = "Boletín Diario de Noticias"
 PODCAST_DESC = "Boletín diario personalizado generado automáticamente."
 PODCAST_AUTHOR = "tokao"
 
-
-# --- Noticias y guion ------------------------------------------------------
-FUENTES = [
-    "https://feeds.bbci.co.uk/mundo/rss.xml",
-    "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-    "https://www.europapress.es/rss/rss.aspx",
-]
-NOTICIAS_POR_FUENTE = 8
-PALABRAS_OBJETIVO = 600  # ~4 minutos de audio
+DIAS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+         "septiembre", "octubre", "noviembre", "diciembre"]
 
 
-def quitar_html(texto):
-    texto = re.sub(r"<[^>]+>", " ", texto or "")
-    return re.sub(r"\s+", " ", texto).strip()
+# --- Prompt ----------------------------------------------------------------
+def construir_prompt(ahora):
+    fecha = f"{DIAS[ahora.weekday()]} {ahora.day} de {MESES[ahora.month - 1]} de {ahora.year}"
+    hora = ahora.strftime("%H:%M")
+    return f"""
+Hoy es {fecha} y son las {hora} en Ginebra (Europe/Zurich).
 
+Busca en internet las noticias más importantes de hoy y redacta un briefing diario en español
+de España. El texto se convertirá directamente a voz para un podcast de entre 6 y 10 minutos,
+así que el guion debe tener entre 900 y 1.400 palabras.
 
-def obtener_noticias_rss(url):
-    """Devuelve una lista de (titular, resumen) de un feed RSS."""
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=15) as response:
-            root = ET.fromstring(response.read())
-        noticias = []
-        for item in root.findall(".//item")[:NOTICIAS_POR_FUENTE]:
-            titulo = quitar_html(item.findtext("title"))
-            resumen = quitar_html(item.findtext("description"))[:400]
-            if titulo:
-                noticias.append((titulo, resumen))
-        print(f"{len(noticias)} noticias de {url}")
-        return noticias
-    except Exception as e:
-        print(f"Advertencia cargando fuente ({url}): {e}")
-        return []
+OBJETIVO Y PRIORIDADES
+Selección rigurosa y útil de las noticias del día, priorizando:
+- Política internacional y nacional de alto impacto.
+- Tecnología, inteligencia artificial, ciberseguridad, internet, gadgets y grandes tecnológicas.
+- Economía, mercados financieros, bolsa, empresas y energía.
+- Sociedad y asuntos de especial relevancia pública.
+- Transporte, movilidad, meteorología, servicios públicos y cambios locales que afecten a la vida cotidiana.
 
+ESTRUCTURA DEL GUION (en este orden)
+1. Apertura: «Buenos días. Este es el briefing del {fecha}, actualizado a las {hora}, hora de Ginebra.»
+2. Resumen ejecutivo: entre 5 y 8 puntos, de mayor a menor impacto, incluyendo las novedades
+   locales que requieran atención práctica.
+3. Noticias por región, cada una introducida con una transición hablada («Pasamos a España»):
+   Mundo; España; Barcelona; Bilbao y Bizkaia; Ginebra y alrededores (ciudad y cantón,
+   Grand Genève, Pays de Gex y localidades próximas).
+   Dentro de cada región, ordena por importancia, destaca tecnología y economía cuando haya
+   novedades significativas y no repitas noticias entre secciones.
+   Para cada noticia: qué ha ocurrido con los datos esenciales, por qué importa, y la fuente
+   citada de forma hablada («según Reuters»).
+   En Ginebra y alrededores presta especial atención a: transporte público, tráfico, obras y
+   cierres; frontera franco-suiza y trabajadores transfronterizos; aeropuerto y conexiones
+   ferroviarias; decisiones locales, servicios públicos, energía y cambios administrativos;
+   meteorología y alertas oficiales con zona y periodo de validez; CERN, organizaciones
+   internacionales y ecosistema tecnológico local.
+4. Mercados: S&P 500, Nasdaq Composite, Dow Jones, IBEX 35, Euro Stoxx 50, CAC 40 y SMI;
+   tecnológicas y otras empresas con movimientos destacados (con el motivo solo si está
+   confirmado); EUR/USD y EUR/CHF; tipos, deuda, petróleo, gas y oro cuando ayuden a entender
+   la jornada; macro y bancos centrales. Para cada cotización indica nivel, variación y si es
+   sesión abierta, último cierre (con su fecha) o futuros, y que los datos pueden tener retraso.
+   No mezcles momentos distintos sin advertirlo ni atribuyas causas no respaldadas.
+5. Cierre breve.
 
-def obtener_briefing():
-    noticias = [n for url in FUENTES for n in obtener_noticias_rss(url)]
-    if not noticias:
-        raise RuntimeError("No se pudo cargar ninguna fuente de noticias.")
-    material = "\n".join(f"- {t}: {r}" if r else f"- {t}" for t, r in noticias)
-    fecha_hoy = datetime.now(timezone.utc).strftime("%d/%m/%Y")
+CRITERIOS EDITORIALES
+- Prioriza noticias publicadas o actualizadas hoy; si usas algo de las últimas 24-48 horas, di la fecha.
+- Fuentes fiables: agencias, medios de referencia, organismos públicos y fuentes oficiales.
+  Para alertas e incidencias de transporte, prioriza la fuente oficial.
+- Marca las noticias en desarrollo, los datos provisionales y lo no confirmado.
+- Separa hechos, declaraciones y análisis.
+- Sin duplicados, sensacionalismo ni relleno. Si una sección no tiene novedades verificadas,
+  dilo en una frase.
+- No inventes datos, citas, cotizaciones ni enlaces. Si no puedes verificar algo, omítelo.
 
-    prompt = f"""
-Eres el presentador de un boletín informativo de radio en español de España.
-Escribe el guion completo del boletín de hoy ({fecha_hoy}) a partir de estas noticias:
+ESTILO PARA AUDIO
+- Sin markdown, viñetas, asteriscos, encabezados con símbolos ni URLs dentro del guion.
+- Párrafos breves y frases claras, pensadas para el oído.
+- Cifras en formato español (1.234,5) y porcentajes como «un 1,2 por ciento».
 
-{material}
-
-Instrucciones:
-- Extensión: unas {PALABRAS_OBJETIVO} palabras (unos 4 minutos leído en voz alta). No te quedes corto.
-- Elige las 6-8 noticias más relevantes, agrupa las que traten del mismo tema y
-  dedica a cada una un párrafo de 3-5 frases con el contexto que aparece en los resúmenes.
-- Empieza con un saludo breve y un adelanto de los temas; usa transiciones naturales
-  entre noticias; termina con una despedida corta.
-- Usa solo la información dada; no inventes datos, cifras ni declaraciones.
-- Frases claras y no demasiado largas, pensadas para el oído. Escribe los números
-  y siglas como se pronunciarían si es ambiguo.
-- Devuelve SOLO el texto que se leerá: sin markdown, viñetas, títulos ni acotaciones.
+FORMATO DE RESPUESTA (exacto)
+GUION:
+(el texto completo para leer en voz alta)
+FUENTES:
+(una línea por noticia citada: Sección | Titular | Medio | URL directa a la noticia)
 """
-    # 1) GitHub Models (gratis en Actions con el GITHUB_TOKEN)
-    if os.environ.get("GITHUB_TOKEN"):
-        for modelo in GITHUB_MODELS:
+
+
+# --- Proveedores de IA con búsqueda web ------------------------------------
+def post_json(url, body, headers, timeout=300):
+    req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"),
+                                 headers={"Content-Type": "application/json", **headers})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"HTTP {e.code}: {e.read()[:300]!r}") from None
+
+
+def con_groq(prompt):
+    data = post_json(
+        "https://api.groq.com/openai/v1/chat/completions",
+        {"model": GROQ_MODEL, "messages": [{"role": "user", "content": prompt}], "temperature": 0.3},
+        {"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"})
+    return data["choices"][0]["message"]["content"], []
+
+
+def con_gemini(prompt):
+    url = (f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+           f"?key={os.environ['GEMINI_API_KEY']}")
+    data = post_json(url, {"contents": [{"parts": [{"text": prompt}]}],
+                           "tools": [{"google_search": {}}],
+                           "generationConfig": {"temperature": 0.3}}, {})
+    cand = data["candidates"][0]
+    texto = "".join(p.get("text", "") for p in cand["content"]["parts"])
+    # Enlaces que Google ha usado realmente para fundamentar la respuesta
+    chunks = cand.get("groundingMetadata", {}).get("groundingChunks", [])
+    extra = [(c["web"].get("title", "Fuente"), c["web"]["uri"]) for c in chunks if "web" in c]
+    return texto, extra
+
+
+PROVEEDORES = [("Groq", "GROQ_API_KEY", con_groq), ("Gemini", "GEMINI_API_KEY", con_gemini)]
+
+
+def generar_con_ia(prompt):
+    errores = []
+    for nombre, clave, funcion in PROVEEDORES:
+        if not os.environ.get(clave):
+            continue
+        for intento in range(2):
             try:
-                texto = limpiar_texto(generar_con_github_models(prompt, modelo))
-                print(f"Guion generado con {modelo} ({len(texto.split())} palabras).")
-                return texto
+                print(f"Preparando el briefing con {nombre}...")
+                texto, extra = funcion(prompt)
+                if len(texto.split()) < 300:
+                    raise RuntimeError(f"respuesta demasiado corta ({len(texto.split())} palabras)")
+                print(f"Briefing generado con {nombre}.")
+                return texto, extra
             except Exception as e:
-                print(f"{modelo} no disponible: {str(e)[:300]}")
-
-    # 2) Último recurso: leer titulares y resúmenes
-    print("AVISO: usando titulares sin resumir.")
-    partes = ["Buenos días. Estas son las noticias de hoy."]
-    partes += [f"{t}. {r}" for t, r in noticias[:10]]
-    return "\n\n".join(partes)
+                errores.append(f"{nombre}: {e}")
+                print(f"  ! {nombre} falló: {e}")
+                time.sleep(20)
+    raise SystemExit("Ninguna IA ha funcionado. Revisa los secretos GROQ_API_KEY / GEMINI_API_KEY.\n"
+                     + "\n".join(errores))
 
 
-def generar_con_github_models(prompt, modelo):
-    body = json.dumps({
-        "model": modelo.strip(),
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.6,
-        "max_tokens": 2000,
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        "https://models.github.ai/inference/chat/completions",
-        data=body,
-        headers={
-            "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
-            "Accept": "application/vnd.github+json",
-            "Content-Type": "application/json",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.load(r)["choices"][0]["message"]["content"]
+def separar_respuesta(texto):
+    partes = re.split(r"\n\s*\**FUENTES\**\s*:?\s*\n", texto, maxsplit=1)
+    guion = re.sub(r"^\s*\**GUION\**\s*:\s*", "", partes[0], flags=re.I)
+    fuentes = []
+    if len(partes) > 1:
+        for linea in partes[1].splitlines():
+            url = re.search(r"https?://\S+", linea)
+            if url:
+                desc = linea[:url.start()].strip(" |-*•\t")
+                fuentes.append((desc or url.group(0), url.group(0).rstrip(").,")))
+    return limpiar_texto(guion), fuentes
 
 
 def limpiar_texto(texto):
-    """Quita restos de markdown/acotaciones que el TTS leería en voz alta."""
+    """Quita restos que el TTS leería en voz alta (markdown, URLs, acotaciones)."""
+    texto = re.sub(r"https?://\S+", "", texto)
     texto = re.sub(r"\[[^\]]*\]|\([^)]*(música|pausa|sonido)[^)]*\)", "", texto, flags=re.I)
+    texto = re.sub(r"^\s*[-•*]\s+", "", texto, flags=re.M)
     texto = re.sub(r"[*#_`>]+", "", texto)
-    return re.sub(r"[ \t]+", " ", texto).strip()
+    texto = re.sub(r"[ \t]+", " ", texto)
+    return re.sub(r"\n{3,}", "\n\n", texto).strip()
 
 
+def notas_html(guion, fuentes):
+    """Notas del episodio para Pocket Casts: inicio del guion + enlaces a las fuentes."""
+    parrafos = [p for p in guion.split("\n\n") if p.strip()][:3]
+    html = "".join(f"<p>{html_escape(p)}</p>" for p in parrafos)
+    if fuentes:
+        html += "<h3>Fuentes</h3><ul>" + "".join(
+            f'<li><a href="{html_escape(u)}">{html_escape(d)}</a></li>' for d, u in fuentes) + "</ul>"
+    return html
+
+
+# --- Audio, episodios y feed -----------------------------------------------
 async def generar_audio(texto, ruta):
-    print(f"Generando {ruta}...")
+    print(f"Generando {ruta} con {VOICE}...")
     await edge_tts.Communicate(texto, VOICE, rate=RATE).save(ruta)
 
 
-# --- Episodios y feed ------------------------------------------------------
 def cargar_episodios():
     if os.path.exists(EPISODES_JSON):
         with open(EPISODES_JSON, encoding="utf-8") as f:
@@ -143,39 +213,29 @@ def cargar_episodios():
     return []
 
 
-def guardar_episodios(episodios):
-    with open(EPISODES_JSON, "w", encoding="utf-8") as f:
-        json.dump(episodios, f, ensure_ascii=False, indent=2)
-
-
 def podar_episodios(episodios):
-    """Mantiene solo los últimos MAX_EPISODES y borra los mp3 sobrantes."""
     episodios = episodios[:MAX_EPISODES]
     vigentes = {e["file"] for e in episodios}
     for nombre in os.listdir(EPISODES_DIR):
         if nombre.endswith(".mp3") and nombre not in vigentes:
             os.remove(os.path.join(EPISODES_DIR, nombre))
-            print(f"Borrado episodio antiguo: {nombre}")
     return episodios
 
 
 def generar_rss(episodios):
     ahora = format_datetime(datetime.now(timezone.utc), usegmt=True)
-    imagen = ""
-    if os.path.exists("cover.png"):
-        imagen = f'\n    <itunes:image href="{BASE_URL}/cover.png"/>'
-
+    imagen = f'\n    <itunes:image href="{BASE_URL}/cover.png"/>' if os.path.exists("cover.png") else ""
     items = []
     for e in episodios:
-        url = f"{BASE_URL}/{EPISODES_DIR}/{e['file']}"
+        desc = e["description"].replace("]]>", "]]&gt;")
+        dur = f"\n      <itunes:duration>{e['duration']}</itunes:duration>" if e.get("duration") else ""
         items.append(f"""    <item>
       <title>{escape(e['title'])}</title>
-      <description>{escape(e['description'])}</description>
+      <description><![CDATA[{desc}]]></description>
       <pubDate>{e['pubDate']}</pubDate>
       <guid isPermaLink="false">{e['guid']}</guid>
-      <enclosure url="{url}" length="{e['length']}" type="audio/mpeg"/>
+      <enclosure url="{BASE_URL}/{EPISODES_DIR}/{e['file']}" length="{e['length']}" type="audio/mpeg"/>{dur}
     </item>""")
-
     rss = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -199,32 +259,42 @@ def generar_rss(episodios):
 
 async def main():
     os.makedirs(EPISODES_DIR, exist_ok=True)
-    ahora = datetime.now(timezone.utc)
-    fecha = ahora.strftime("%Y-%m-%d")
+    ahora_local = datetime.now(TZ)
+
+    respuesta, enlaces_extra = generar_con_ia(construir_prompt(ahora_local))
+    guion, fuentes = separar_respuesta(respuesta)
+    vistos = {u for _, u in fuentes}
+    fuentes += [(d, u) for d, u in enlaces_extra if u not in vistos]
+
+    palabras = len(guion.split())
+    print(f"Guion: {palabras} palabras (~{palabras / 140:.1f} min)")
+    with open(GUION_FILE, "w", encoding="utf-8") as f:
+        f.write(guion + "\n\nFUENTES:\n" + "\n".join(f"{d} | {u}" for d, u in fuentes))
+
+    fecha = ahora_local.strftime("%Y-%m-%d")
     archivo = f"boletin_{fecha}.mp3"
     ruta = os.path.join(EPISODES_DIR, archivo)
+    await generar_audio(guion, ruta)
 
-    print("Obteniendo texto del briefing...")
-    texto = obtener_briefing()
-    print("-" * 40, texto, "-" * 40, sep="\n")
-
-    await generar_audio(texto, ruta)
-
+    tam = os.path.getsize(ruta)
+    segundos = int(tam * 8 / 48000)   # edge-tts genera MP3 a 48 kbps
+    ahora = datetime.now(timezone.utc)
     episodio = {
         "guid": f"boletin-{fecha}",
         "file": archivo,
         "title": f"Boletín {fecha}",
-        "description": texto[:300] + ("..." if len(texto) > 300 else ""),
+        "description": notas_html(guion, fuentes),
         "pubDate": format_datetime(ahora, usegmt=True),
-        "length": os.path.getsize(ruta),
+        "length": tam,
+        "duration": f"{segundos // 60}:{segundos % 60:02d}",
     }
+    print(f"Duración aproximada: {episodio['duration']}")
 
-    # Si se ejecuta dos veces el mismo día, sustituye el episodio de ese día
     episodios = [e for e in cargar_episodios() if e["guid"] != episodio["guid"]]
     episodios.insert(0, episodio)
     episodios = podar_episodios(episodios)
-
-    guardar_episodios(episodios)
+    with open(EPISODES_JSON, "w", encoding="utf-8") as f:
+        json.dump(episodios, f, ensure_ascii=False, indent=2)
     generar_rss(episodios)
 
 
