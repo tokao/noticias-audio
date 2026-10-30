@@ -6,67 +6,76 @@ from datetime import datetime, timezone
 import urllib.request
 import google.generativeai as genai
 
-PROMPT_BOLETIN = """
-Actúa como un locutor de radio profesional y redacta un boletín diario de noticias completo y extenso en español para ser leído en voz alta.
+# Fuentes de noticias en vivo para alimentar a Gemini
+FUENTES_RSS = {
+    "España y Mundo": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+    "Economía y Mercados": "https://cincodias.elpais.com/rss/cincodias/portada.xml",
+    "Suiza y Ginebra": "https://www.swissinfo.ch/spa/rss/index.xml"
+}
 
-Estructura el informe detalladamente (debe ser un texto largo de unas 500 a 700 palabras, pensado para durar entre 3 y 5 minutos de lectura):
-
-1. INTRODUCCIÓN: Saludo inicial y fecha de hoy.
-2. RESUMEN EJECUTIVO: 4 titulares clave explicados con detalle.
-3. ESPAÑA Y MUNDO: Desarrolla 3 noticias políticas y económicas de gran impacto.
-4. CIUDADES LOCALES:
-   - Barcelona: Novedades sobre movilidad, seguridad o actualidad local.
-   - Bilbao y Bizkaia: Actualidad municipal y económica.
-5. GINEBRA Y PAYS DE GEX: Noticia de actualidad local e incluye una agenda cultural detallada con eventos, conciertos o exposiciones destacadas para los próximos días.
-6. MERCADOS FINANCIEROS: Situación de los principales índices, cambio EUR/USD, EUR/CHF y datos relevantes de tecnología o energía.
-7. CIERRE: Despedida breve.
-
-REGLAS OBLIGATORIAS DE FORMATO PARA AUDIO:
-- No incluyas URLs, símbolos de formato Markdown (como #, *, -), ni caracteres especiales.
-- Escribe los números con palabras cuando sea conveniente para facilitar la lectura.
-- Utiliza frases fluidas y de lenguaje natural.
-"""
-
-def obtener_titulares_rss():
-    """Respaldo en caso de fallo crítico en la API"""
-    titulares = ["Hola, este es tu boletín diario de noticias."]
-    urls = [
-        ("España y Mundo", "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"),
-        ("Ginebra y Suiza", "https://www.swissinfo.ch/spa/rss/index.xml")
-    ]
-    for cat, url in urls:
+def recolectar_noticias_frescas():
+    """Descarga los titulares reales del día para dárselos a Gemini."""
+    texto_noticias = ""
+    for categoria, url in FUENTES_RSS.items():
         try:
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
             xml_data = urllib.request.urlopen(req, timeout=10).read()
             root = ET.fromstring(xml_data)
-            items = root.findall('.//item')[:3]
-            titulares.append(f"Noticias de {cat}:")
+            items = root.findall('.//item')[:5]
+            
+            texto_noticias += f"\n--- TITULARES DE {categoria.upper()} ---\n"
             for item in items:
-                t = item.find('title')
-                if t is not None and t.text:
-                    titulares.append(f"- {t.text.strip()}")
+                title = item.find('title')
+                desc = item.find('description')
+                t_text = title.text.strip() if title is not None and title.text else ""
+                d_text = desc.text.strip() if desc is not None and desc.text else ""
+                texto_noticias += f"- {t_text}: {d_text}\n"
         except Exception as e:
-            print(f"Error cargando RSS {cat}: {e}")
-    return "\n".join(titulares)
+            print(f"Error descargando {categoria}: {e}")
+            
+    return texto_noticias
 
-def obtener_briefing():
+def obtener_briefing_ia():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("ALERTA: GEMINI_API_KEY no encontrada en las variables de entorno. Usando RSS...")
-        return obtener_titulares_rss()
+        raise ValueError("Error: La variable GEMINI_API_KEY no está configurada en los Secrets de GitHub.")
 
-    try:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        response = model.generate_content(PROMPT_BOLETIN)
-        
-        texto_generado = response.text.strip()
-        print(f"ÉXITO: Texto generado por Gemini con {len(texto_generado)} caracteres.")
-        return texto_generado
-    except Exception as e:
-        print(f"ERROR al llamar a la API de Gemini: {e}")
-        print("Usando fuente RSS de respaldo...")
-        return obtener_titulares_rss()
+    # 1. Obtenemos la información en tiempo real
+    noticias_contexto = recolectar_noticias_frescas()
+    fecha_hoy = datetime.now().strftime("%d de %B de %Y")
+
+    # 2. Construimos el prompt con los datos reales incluidos
+    prompt = f"""
+Actúa como un locutor de radio profesional. Tu tarea es redactar un boletín diario de noticias en español largo, fluido y detallado para ser leído en voz alta.
+
+Utiliza la siguiente información de última hora recopilada hoy ({fecha_hoy}):
+
+{noticias_contexto}
+
+ESTRUCTURA OBLIGATORIA DEL BOLETÍN (debe tener una longitud total de entre 600 y 800 palabras para durar entre 3 y 5 minutos hablados):
+1. INTRODUCCIÓN: Saludo cordial de buenos días y presentación del boletín del {fecha_hoy}.
+2. RESUMEN EJECUTIVO: Analiza y desarrolla los 4 titulares más importantes extraídos de los datos anteriores.
+3. ESPAÑA Y MUNDO: Desarrolla las noticias internacionales y nacionales con contexto periodístico amplio.
+4. ACTUALIDAD LOCAL:
+   - Barcelona y Bilbao: Comenta la actualidad y noticias relevantes de ambas regiones.
+   - Ginebra y Pays de Gex: Resume las novedades de Suiza/Ginebra e incluye una sugerencia cultural o de agenda local para hoy o los próximos días.
+5. ECONOMÍA Y MERCADOS: Estado general de los mercados (menciona la evolución del Euro, Franco Suizo y Bolsas).
+6. CIERRE: Despedida breve y profesional deseando un buen día a los oyentes.
+
+REGLAS DE FORMATO PARA SÍNTESIS DE VOZ:
+- No uses caracteres Markdown como '#', '*', '-', ni enlaces o URLs.
+- Escribe todos los números largos o símbolos con letras (ejemplo: "cincuenta por ciento" en vez de "50%", "euros" en vez de "€").
+- Escribe en párrafos continuos y con puntuación clara para favorecer las pausas naturales de lectura.
+"""
+
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    
+    response = model.generate_content(prompt)
+    texto_final = response.text.strip()
+    
+    print(f"ÉXITO: Generado boletín con {len(texto_final)} caracteres.")
+    return texto_final
 
 def actualizar_rss(filename_mp3, fecha_str):
     rss_file = "rss.xml"
@@ -104,11 +113,11 @@ def actualizar_rss(filename_mp3, fecha_str):
             f.write(full_rss)
 
 async def main():
-    texto = obtener_briefing()
+    texto = obtener_briefing_ia()
     fecha_hoy_str = datetime.now().strftime("%Y-%m-%d")
     filename_mp3 = f"boletin_{fecha_hoy_str}.mp3"
     
-    communicate = edge_tts.Communicate(texto, "es-ES-ElviraNeural")
+    communicate = edge_tts.Communicate(texto, "es-ES-AlvaroNeural")
     await communicate.save(filename_mp3)
     
     actualizar_rss(filename_mp3, fecha_hoy_str)
