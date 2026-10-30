@@ -7,7 +7,7 @@ from datetime import datetime
 from google import genai
 import edge_tts
 
-# Inicializar cliente con el nuevo SDK oficial
+# Inicializar cliente con el SDK oficial
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
 # Configuración de voz para edge-tts
@@ -33,34 +33,31 @@ def obtener_noticias_rss(url):
                     titulares.append(title.text.strip())
 
             return "\n".join(f"- {t}" for t in titulares)
-    except urllib.error.HTTPError as e:
-        print(f"Error HTTP cargando fuente ({url}): {e}")
-        return "No se pudieron obtener titulares de esta fuente."
     except Exception as e:
-        print(f"Error cargando fuente ({url}): {e}")
-        return "No se pudieron obtener titulares de esta fuente."
+        print(f"Advertencia cargando fuente ({url}): {e}")
+        return "Noticias destacadas del día no disponibles en este momento."
 
 
 def obtener_briefing():
     """Recopila titulares y genera el resumen diario utilizando Gemini."""
-    # URL de RSS activa para noticias de Suiza en español
-    rss_suiza = "https://www.swissinfo.ch/spa/rss/index"
-    titulares_suiza = obtener_noticias_rss(rss_suiza)
+    # Feed RSS estable de noticias en español
+    rss_url = "https://www.rtve.es/api/noticias.rss"
+    titulares = obtener_noticias_rss(rss_url)
 
     prompt = f"""
     Eres un locutor de radio profesional. Sintetiza las siguientes noticias en un guion breve y fluido 
     listo para ser leído en un podcast informativo diario de 2 minutos.
 
-    Titulares destacados de la región:
-    {titulares_suiza}
+    Titulares destacados:
+    {titulares}
 
     Redacta el texto de forma clara, natural y concisa en español.
     """
 
     try:
-        # Actualizado a gemini-3.8-flash según lo requerido por la API
+        # Se usa el modelo flash estándar disponible
         response = client.models.generate_content(
-            model="gemini-3.8-flash",
+            model="gemini-2.5-flash",
             contents=prompt,
         )
         return response.text
@@ -82,7 +79,6 @@ def actualizar_rss(texto_briefing):
     print("Actualizando rss.xml...")
     fecha_actual = datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")
     
-    # Limpiamos caracteres que puedan romper el XML
     texto_limpio = texto_briefing.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     
     rss_content = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -115,10 +111,7 @@ async def main():
     print(texto)
     print("-" * 40)
 
-    # 1. Generar el archivo de audio MP3
     await generar_audio(texto)
-
-    # 2. Actualizar el archivo RSS XML
     actualizar_rss(texto)
 
 
