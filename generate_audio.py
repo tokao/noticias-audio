@@ -113,7 +113,11 @@ FUENTES:
 # --- Proveedores de IA con búsqueda web ------------------------------------
 def post_json(url, body, headers, timeout=300):
     req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"),
-                                 headers={"Content-Type": "application/json", **headers})
+                                 headers={"Content-Type": "application/json",
+                                          "Accept": "application/json",
+                                          # Cloudflare (Groq) bloquea el User-Agent por defecto de Python
+                                          "User-Agent": "noticias-audio/1.0 (GitHub Actions)",
+                                          **headers})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.load(r)
