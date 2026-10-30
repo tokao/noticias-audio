@@ -7,14 +7,24 @@ import urllib.request
 
 # Texto o prompt para la IA
 PROMPT_BOLETIN = """
-Redacta un boletín diario de noticias en español para ser leído en voz alta.
-Estructura clara:
-1. Resumen ejecutivo (3-4 puntos).
-2. Noticias principales de España, Barcelona, Bilbao y Ginebra.
-3. Resumen de mercados financieros (EUR/USD, EUR/CHF).
-4. Un apunte de la agenda cultural en Ginebra.
+Actúa como un locutor de radio profesional y redacta un boletín diario de noticias completo y detallado en español para ser leído en voz alta.
 
-Nota: No uses caracteres raros, ni símbolos Markdown como '#', '*', ni URLs HTTP. Tono fluido y directo para audio.
+Estructura el informe con el siguiente nivel de detalle (debe tener una longitud total suficiente para unos 3 a 5 minutos de lectura fluida):
+
+1. INTRODUCCIÓN: Saludo inicial y fecha de hoy.
+2. RESUMEN EJECUTIVO: 4 titulares clave explicados brevemente.
+3. ESPAÑA Y MUNDO: Desarrolla 3 noticias políticas y económicas de gran impacto.
+4. CIUDADES LOCALES:
+   - Barcelona: Novedades sobre movilidad, seguridad o actualidad local.
+   - Bilbao / Bizkaia: Actualidad municipal y económica.
+5. GINEBRA Y PAYS DE GEX: Noticia de actualidad local e incluye una agenda cultural detallada con eventos, conciertos o exposiciones destacadas para los próximos días.
+6. MERCADOS FINANCIEROS: Situación de los principales índices, cambio EUR/USD, EUR/CHF y datos relevantes de tecnología o energía.
+7. CIERRE: Despedida breve.
+
+REGLAS DE FORMATO PARA AUDIO:
+- No incluyas URLs, signos de formato Markdown (como #, *, -), ni caracteres especiales.
+- Escribe los números largos con palabras cuando sea conveniente para facilitar la lectura.
+- Utiliza frases fluidas y de lenguaje natural.
 """
 
 def obtener_titulares_rss():
