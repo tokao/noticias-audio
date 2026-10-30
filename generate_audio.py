@@ -22,8 +22,8 @@ EPISODES_JSON = "episodes.json"  # historial de episodios (para regenerar el fee
 RSS_FILE = "rss.xml"
 MAX_EPISODES = 30                # se borran los más antiguos para no inflar el repo
 
-PODCAST_TITLE = "Noticias Diarias Audio"
-PODCAST_DESC = "Briefing diario de noticias en audio"
+PODCAST_TITLE = "Boletín Diario de Noticias"
+PODCAST_DESC = "Boletín diario personalizado generado automáticamente."
 PODCAST_AUTHOR = "tokao"
 
 
@@ -102,8 +102,8 @@ def podar_episodios(episodios):
 def generar_rss(episodios):
     ahora = format_datetime(datetime.now(timezone.utc), usegmt=True)
     imagen = ""
-    if os.path.exists("cover.jpg"):
-        imagen = f'\n    <itunes:image href="{BASE_URL}/cover.jpg"/>'
+    if os.path.exists("cover.png"):
+        imagen = f'\n    <itunes:image href="{BASE_URL}/cover.png"/>'
 
     items = []
     for e in episodios:
@@ -141,7 +141,7 @@ async def main():
     os.makedirs(EPISODES_DIR, exist_ok=True)
     ahora = datetime.now(timezone.utc)
     fecha = ahora.strftime("%Y-%m-%d")
-    archivo = f"noticias-{fecha}.mp3"
+    archivo = f"boletin_{fecha}.mp3"
     ruta = os.path.join(EPISODES_DIR, archivo)
 
     print("Obteniendo texto del briefing...")
@@ -151,9 +151,9 @@ async def main():
     await generar_audio(texto, ruta)
 
     episodio = {
-        "guid": f"noticias-{fecha}",
+        "guid": f"boletin-{fecha}",
         "file": archivo,
-        "title": f"Briefing diario - {ahora.strftime('%d/%m/%Y')}",
+        "title": f"Boletín {fecha}",
         "description": texto[:300] + ("..." if len(texto) > 300 else ""),
         "pubDate": format_datetime(ahora, usegmt=True),
         "length": os.path.getsize(ruta),
