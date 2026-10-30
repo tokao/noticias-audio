@@ -13,8 +13,10 @@ import edge_tts
 # --- Configuración ---------------------------------------------------------
 # URL pública donde se sirve el repo (GitHub Pages). Sin barra final.
 BASE_URL = os.environ.get("BASE_URL", "https://tokao.github.io/noticias-audio").rstrip("/")
-GITHUB_MODEL = os.environ.get("GITHUB_MODEL", "openai/gpt-4o-mini")
-VOICE = "es-ES-AlvaroNeural"
+# Modelos gratuitos de GitHub Models, en orden de preferencia
+GITHUB_MODELS = os.environ.get("GITHUB_MODELS", "openai/gpt-4.1,openai/gpt-4o-mini").split(",")
+VOICE = os.environ.get("VOICE", "es-ES-AlvaroNeural")
+RATE = os.environ.get("RATE", "-5%")  # algo más pausado que el ritmo por defecto
 
 EPISODES_DIR = "episodes"        # aquí van los mp3, uno por día
 EPISODES_JSON = "episodes.json"  # historial de episodios (para regenerar el feed)
@@ -27,54 +29,86 @@ PODCAST_AUTHOR = "tokao"
 
 
 # --- Noticias y guion ------------------------------------------------------
+FUENTES = [
+    "https://feeds.bbci.co.uk/mundo/rss.xml",
+    "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+    "https://www.europapress.es/rss/rss.aspx",
+]
+NOTICIAS_POR_FUENTE = 8
+PALABRAS_OBJETIVO = 600  # ~4 minutos de audio
+
+
+def quitar_html(texto):
+    texto = re.sub(r"<[^>]+>", " ", texto or "")
+    return re.sub(r"\s+", " ", texto).strip()
+
+
 def obtener_noticias_rss(url):
-    """Obtiene y extrae los títulos de un feed RSS."""
+    """Devuelve una lista de (titular, resumen) de un feed RSS."""
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             root = ET.fromstring(response.read())
-        titulares = [
-            item.findtext("title").strip()
-            for item in root.findall(".//item")[:5]
-            if item.findtext("title")
-        ]
-        return "\n".join(f"- {t}" for t in titulares)
+        noticias = []
+        for item in root.findall(".//item")[:NOTICIAS_POR_FUENTE]:
+            titulo = quitar_html(item.findtext("title"))
+            resumen = quitar_html(item.findtext("description"))[:400]
+            if titulo:
+                noticias.append((titulo, resumen))
+        print(f"{len(noticias)} noticias de {url}")
+        return noticias
     except Exception as e:
         print(f"Advertencia cargando fuente ({url}): {e}")
-        return "Noticias destacadas del día no disponibles en este momento."
+        return []
 
 
 def obtener_briefing():
-    titulares = obtener_noticias_rss("https://feeds.bbci.co.uk/mundo/rss.xml")
+    noticias = [n for url in FUENTES for n in obtener_noticias_rss(url)]
+    if not noticias:
+        raise RuntimeError("No se pudo cargar ninguna fuente de noticias.")
+    material = "\n".join(f"- {t}: {r}" if r else f"- {t}" for t, r in noticias)
+    fecha_hoy = datetime.now(timezone.utc).strftime("%d/%m/%Y")
+
     prompt = f"""
-Eres un locutor de radio profesional. Sintetiza las siguientes noticias en un guion breve y fluido
-listo para ser leído en un podcast informativo diario de 2 minutos.
+Eres el presentador de un boletín informativo de radio en español de España.
+Escribe el guion completo del boletín de hoy ({fecha_hoy}) a partir de estas noticias:
 
-Titulares destacados:
-{titulares}
+{material}
 
-Redacta el texto de forma clara, natural y concisa en español.
-Devuelve SOLO el texto que se va a leer en voz alta: sin markdown, sin asteriscos,
-sin títulos y sin acotaciones como [música] o (pausa).
+Instrucciones:
+- Extensión: unas {PALABRAS_OBJETIVO} palabras (unos 4 minutos leído en voz alta). No te quedes corto.
+- Elige las 6-8 noticias más relevantes, agrupa las que traten del mismo tema y
+  dedica a cada una un párrafo de 3-5 frases con el contexto que aparece en los resúmenes.
+- Empieza con un saludo breve y un adelanto de los temas; usa transiciones naturales
+  entre noticias; termina con una despedida corta.
+- Usa solo la información dada; no inventes datos, cifras ni declaraciones.
+- Frases claras y no demasiado largas, pensadas para el oído. Escribe los números
+  y siglas como se pronunciarían si es ambiguo.
+- Devuelve SOLO el texto que se leerá: sin markdown, viñetas, títulos ni acotaciones.
 """
     # 1) GitHub Models (gratis en Actions con el GITHUB_TOKEN)
     if os.environ.get("GITHUB_TOKEN"):
-        try:
-            texto = generar_con_github_models(prompt)
-            print("Guion generado con GitHub Models.")
-            return limpiar_texto(texto)
-        except Exception as e:
-            print(f"GitHub Models no disponible: {str(e)[:200]}")
+        for modelo in GITHUB_MODELS:
+            try:
+                texto = limpiar_texto(generar_con_github_models(prompt, modelo))
+                print(f"Guion generado con {modelo} ({len(texto.split())} palabras).")
+                return texto
+            except Exception as e:
+                print(f"{modelo} no disponible: {str(e)[:300]}")
 
-    # 2) Último recurso: leer los titulares tal cual
-    print("Usando titulares sin resumir.")
-    return "Buenos días. Estos son los titulares de hoy.\n" + titulares.replace("- ", "")
+    # 2) Último recurso: leer titulares y resúmenes
+    print("AVISO: usando titulares sin resumir.")
+    partes = ["Buenos días. Estas son las noticias de hoy."]
+    partes += [f"{t}. {r}" for t, r in noticias[:10]]
+    return "\n\n".join(partes)
 
 
-def generar_con_github_models(prompt):
+def generar_con_github_models(prompt, modelo):
     body = json.dumps({
-        "model": GITHUB_MODEL,
+        "model": modelo.strip(),
         "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.6,
+        "max_tokens": 2000,
     }).encode("utf-8")
     req = urllib.request.Request(
         "https://models.github.ai/inference/chat/completions",
@@ -98,7 +132,7 @@ def limpiar_texto(texto):
 
 async def generar_audio(texto, ruta):
     print(f"Generando {ruta}...")
-    await edge_tts.Communicate(texto, VOICE).save(ruta)
+    await edge_tts.Communicate(texto, VOICE, rate=RATE).save(ruta)
 
 
 # --- Episodios y feed ------------------------------------------------------
