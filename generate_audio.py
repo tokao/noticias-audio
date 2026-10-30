@@ -1,36 +1,62 @@
 import os
 import asyncio
 import edge_tts
-from google import genai
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+import urllib.request
 
-# Tu instrucción personalizada (Prompt) para controlar el brief
+# Texto o prompt para la IA
 PROMPT_BOLETIN = """
-Busca las noticias más importantes de las últimas 24 horas y redacta un boletín diario en español optimizado para ser leído en voz alta.
-Estructura el texto en las siguientes secciones claras y concisas:
-1. Resumen ejecutivo (3 a 5 puntos clave).
-2. España y Mundo.
-3. Barcelona y Bilbao.
-4. Ginebra y Pays de Gex (incluye un pincelada cultural relevante para hoy o los próximos días).
-5. Breve resumen de Mercados (EUR/USD, EUR/CHF, bolsas).
+Redacta un boletín diario de noticias en español para ser leído en voz alta.
+Estructura clara:
+1. Resumen ejecutivo (3-4 puntos).
+2. Noticias principales de España, Barcelona, Bilbao y Ginebra.
+3. Resumen de mercados financieros (EUR/USD, EUR/CHF).
+4. Un apunte de la agenda cultural en Ginebra.
 
-Notas de estilo:
-- Usa un tono divulgativo, fluido y profesional pero natural para ser escuchado en audio.
-- Evita incluir enlaces HTTP, caracteres extraños o símbolos como '#' o '*'.
-- Longitud total aproximada: 3 a 5 minutos de lectura.
+Nota: No uses caracteres raros, ni símbolos Markdown como '#', '*', ni URLs HTTP. Tono fluido y directo para audio.
 """
 
-def obtener_briefing_ia():
+def obtener_titulares_rss():
+    """Respaldo gratuito sin API key en caso de que falle Gemini"""
+    titulares = ["Hola, este es tu boletín diario de noticias."]
+    urls = [
+        ("España y Mundo", "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"),
+        ("Ginebra y Suiza", "https://www.swissinfo.ch/spa/rss/index.xml")
+    ]
+    for cat, url in urls:
+        try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+            xml_data = urllib.request.urlopen(req, timeout=10).read()
+            root = ET.fromstring(xml_data)
+            items = root.findall('.//item')[:3]
+            titulares.append(f"Noticias de {cat}:")
+            for item in items:
+                t = item.find('title')
+                if t is not None and t.text:
+                    titulares.append(f"- {t.text.strip()}")
+        except Exception as e:
+            print(f"Error cargando RSS {cat}: {e}")
+    return "\n".join(titulares)
+
+def obtener_briefing():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        return "Hola. No se encontró la clave de la API de Gemini."
+        print("GEMINI_API_KEY no encontrada. Generando resumen con RSS...")
+        return obtener_titulares_rss()
 
-    client = genai.Client(api_key=api_key)
-    response = client.models.generate_content(
-        model='gemini-2.5-flash',
-        contents=PROMPT_BOLETIN,
-    )
-    return response.text
+    try:
+        from google import genai
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=PROMPT_BOLETIN,
+        )
+        return response.text
+    except Exception as e:
+        print(f"Error llamando a la API de Gemini: {e}")
+        print("Usando fuente RSS de respaldo...")
+        return obtener_titulares_rss()
 
 def actualizar_rss(filename_mp3, fecha_str):
     rss_file = "rss.xml"
@@ -59,7 +85,7 @@ def actualizar_rss(filename_mp3, fecha_str):
     <title>Boletín Diario de Noticias</title>
     <link>https://tokao.github.io/noticias-audio/</link>
     <language>es</language>
-    <description>Boletín diario personalizado generado por IA.</description>
+    <description>Boletín diario personalizado generado automáticamente.</description>
 {nuevo_item}
   </channel>
 </rss>"""
@@ -67,12 +93,10 @@ def actualizar_rss(filename_mp3, fecha_str):
             f.write(full_rss)
 
 async def main():
-    texto = obtener_briefing_ia()
-    
+    texto = obtener_briefing()
     fecha_hoy_str = datetime.now().strftime("%Y-%m-%d")
     filename_mp3 = f"boletin_{fecha_hoy_str}.mp3"
     
-    # Generar el audio
     communicate = edge_tts.Communicate(texto, "es-ES-AlvaroNeural")
     await communicate.save(filename_mp3)
     
