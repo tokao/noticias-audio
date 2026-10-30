@@ -4,31 +4,31 @@ import edge_tts
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 import urllib.request
+import google.generativeai as genai
 
-# Texto o prompt para la IA
 PROMPT_BOLETIN = """
-Actúa como un locutor de radio profesional y redacta un boletín diario de noticias completo y detallado en español para ser leído en voz alta.
+Actúa como un locutor de radio profesional y redacta un boletín diario de noticias completo y extenso en español para ser leído en voz alta.
 
-Estructura el informe con el siguiente nivel de detalle (debe tener una longitud total suficiente para unos 3 a 5 minutos de lectura fluida):
+Estructura el informe detalladamente (debe ser un texto largo de unas 500 a 700 palabras, pensado para durar entre 3 y 5 minutos de lectura):
 
 1. INTRODUCCIÓN: Saludo inicial y fecha de hoy.
-2. RESUMEN EJECUTIVO: 4 titulares clave explicados brevemente.
+2. RESUMEN EJECUTIVO: 4 titulares clave explicados con detalle.
 3. ESPAÑA Y MUNDO: Desarrolla 3 noticias políticas y económicas de gran impacto.
 4. CIUDADES LOCALES:
    - Barcelona: Novedades sobre movilidad, seguridad o actualidad local.
-   - Bilbao / Bizkaia: Actualidad municipal y económica.
+   - Bilbao y Bizkaia: Actualidad municipal y económica.
 5. GINEBRA Y PAYS DE GEX: Noticia de actualidad local e incluye una agenda cultural detallada con eventos, conciertos o exposiciones destacadas para los próximos días.
 6. MERCADOS FINANCIEROS: Situación de los principales índices, cambio EUR/USD, EUR/CHF y datos relevantes de tecnología o energía.
 7. CIERRE: Despedida breve.
 
-REGLAS DE FORMATO PARA AUDIO:
-- No incluyas URLs, signos de formato Markdown (como #, *, -), ni caracteres especiales.
-- Escribe los números largos con palabras cuando sea conveniente para facilitar la lectura.
+REGLAS OBLIGATORIAS DE FORMATO PARA AUDIO:
+- No incluyas URLs, símbolos de formato Markdown (como #, *, -), ni caracteres especiales.
+- Escribe los números con palabras cuando sea conveniente para facilitar la lectura.
 - Utiliza frases fluidas y de lenguaje natural.
 """
 
 def obtener_titulares_rss():
-    """Respaldo gratuito sin API key en caso de que falle Gemini"""
+    """Respaldo en caso de fallo crítico en la API"""
     titulares = ["Hola, este es tu boletín diario de noticias."]
     urls = [
         ("España y Mundo", "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"),
@@ -52,19 +52,19 @@ def obtener_titulares_rss():
 def obtener_briefing():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("GEMINI_API_KEY no encontrada. Generando resumen con RSS...")
+        print("ALERTA: GEMINI_API_KEY no encontrada en las variables de entorno. Usando RSS...")
         return obtener_titulares_rss()
 
     try:
-        from google import genai
-        client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=PROMPT_BOLETIN,
-        )
-        return response.text
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(PROMPT_BOLETIN)
+        
+        texto_generado = response.text.strip()
+        print(f"ÉXITO: Texto generado por Gemini con {len(texto_generado)} caracteres.")
+        return texto_generado
     except Exception as e:
-        print(f"Error llamando a la API de Gemini: {e}")
+        print(f"ERROR al llamar a la API de Gemini: {e}")
         print("Usando fuente RSS de respaldo...")
         return obtener_titulares_rss()
 
@@ -96,6 +96,7 @@ def actualizar_rss(filename_mp3, fecha_str):
     <link>https://tokao.github.io/noticias-audio/</link>
     <language>es</language>
     <description>Boletín diario personalizado generado automáticamente.</description>
+    <itunes:image href="https://tokao.github.io/noticias-audio/cover.png"/>
 {nuevo_item}
   </channel>
 </rss>"""
@@ -107,7 +108,7 @@ async def main():
     fecha_hoy_str = datetime.now().strftime("%Y-%m-%d")
     filename_mp3 = f"boletin_{fecha_hoy_str}.mp3"
     
-    communicate = edge_tts.Communicate(texto, "es-ES-ElviraNeural")
+    communicate = edge_tts.Communicate(texto, "es-ES-AlvaroNeural")
     await communicate.save(filename_mp3)
     
     actualizar_rss(filename_mp3, fecha_hoy_str)
