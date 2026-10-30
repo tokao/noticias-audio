@@ -1,39 +1,36 @@
+import os
 import asyncio
 import edge_tts
-import xml.etree.ElementTree as ET
+from google import genai
 from datetime import datetime, timezone
-import urllib.request
-import os
 
-# Fuentes de noticias públicas para extraer titulares reales
-FEEDS_NOTICIAS = {
-    "España y Mundo": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-    "Ginebra y Suiza": "https://www.swissinfo.ch/spa/rss/index.xml"
-}
+# Tu instrucción personalizada (Prompt) para controlar el brief
+PROMPT_BOLETIN = """
+Busca las noticias más importantes de las últimas 24 horas y redacta un boletín diario en español optimizado para ser leído en voz alta.
+Estructura el texto en las siguientes secciones claras y concisas:
+1. Resumen ejecutivo (3 a 5 puntos clave).
+2. España y Mundo.
+3. Barcelona y Bilbao.
+4. Ginebra y Pays de Gex (incluye un pincelada cultural relevante para hoy o los próximos días).
+5. Breve resumen de Mercados (EUR/USD, EUR/CHF, bolsas).
 
-def obtener_titulares():
-    titulares = []
-    for categoria, url in FEEDS_NOTICIAS.items():
-        try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-            xml_data = urllib.request.urlopen(req, timeout=10).read()
-            root = ET.fromstring(xml_data)
-            items = root.findall('.//item')[:4] # Extrae los 4 titulares principales
-            
-            titulares.append(f"Noticias de {categoria}:")
-            for item in items:
-                title = item.find('title')
-                if title is not None and title.text:
-                    titulares.append(f"- {title.text.strip()}")
-        except Exception as e:
-            print(f"Error obteniendo noticias de {categoria}: {e}")
-            
-    if not titulares:
-        return "Hola. No se pudieron recuperar los titulares del día de hoy."
-        
-    fecha_hoy = datetime.now().strftime("%d de %m de %Y")
-    texto_final = f"Hola, este es tu boletín diario de noticias del {fecha_hoy}.\n\n" + "\n".join(titulares)
-    return texto_final
+Notas de estilo:
+- Usa un tono divulgativo, fluido y profesional pero natural para ser escuchado en audio.
+- Evita incluir enlaces HTTP, caracteres extraños o símbolos como '#' o '*'.
+- Longitud total aproximada: 3 a 5 minutos de lectura.
+"""
+
+def obtener_briefing_ia():
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return "Hola. No se encontró la clave de la API de Gemini."
+
+    client = genai.Client(api_key=api_key)
+    response = client.models.generate_content(
+        model='gemini-2.5-flash',
+        contents=PROMPT_BOLETIN,
+    )
+    return response.text
 
 def actualizar_rss(filename_mp3, fecha_str):
     rss_file = "rss.xml"
@@ -42,7 +39,7 @@ def actualizar_rss(filename_mp3, fecha_str):
     
     nuevo_item = f"""    <item>
       <title>Boletín {fecha_str}</title>
-      <description>Resumen diario de noticias del {fecha_str}</description>
+      <description>Resumen diario de noticias e información cultural.</description>
       <pubDate>{now_utc}</pubDate>
       <enclosure url="{mp3_url}" length="1000000" type="audio/mpeg"/>
       <guid>{mp3_url}</guid>
@@ -62,7 +59,7 @@ def actualizar_rss(filename_mp3, fecha_str):
     <title>Boletín Diario de Noticias</title>
     <link>https://tokao.github.io/noticias-audio/</link>
     <language>es</language>
-    <description>Boletín de noticias en audio diario.</description>
+    <description>Boletín diario personalizado generado por IA.</description>
 {nuevo_item}
   </channel>
 </rss>"""
@@ -70,17 +67,15 @@ def actualizar_rss(filename_mp3, fecha_str):
             f.write(full_rss)
 
 async def main():
-    texto = obtener_titulares()
+    texto = obtener_briefing_ia()
     
-    # Nombre del archivo con la fecha de hoy
     fecha_hoy_str = datetime.now().strftime("%Y-%m-%d")
     filename_mp3 = f"boletin_{fecha_hoy_str}.mp3"
     
-    # Generar el archivo de audio con Microsoft Edge TTS
+    # Generar el audio
     communicate = edge_tts.Communicate(texto, "es-ES-AlvaroNeural")
     await communicate.save(filename_mp3)
     
-    # Actualizar la lista RSS del podcast
     actualizar_rss(filename_mp3, fecha_hoy_str)
 
 if __name__ == "__main__":
