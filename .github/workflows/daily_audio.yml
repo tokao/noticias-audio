@@ -2,15 +2,14 @@ name: Generar Audio y RSS Diario
 
 on:
   schedule:
-    # Se ejecuta todos los días a las 06:00 UTC (ajusta la hora si lo prefieres)
     - cron: '0 6 * * *'
-  workflow_dispatch: # Permite ejecutarlo manualmente cuando quieras desde la pestaña Actions
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Otorga permisos para guardar los nuevos archivos en el repositorio
+      contents: write
 
     steps:
       - name: Descargar repositorio
@@ -23,9 +22,11 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install edge-tts
+          pip install edge-tts google-genai
 
       - name: Generar audio y actualizar RSS
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python generate_audio.py
 
@@ -34,5 +35,5 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add *.mp3 rss.xml
-          git commit -m "Audio y RSS diarios generados automáticamente" || exit 0
+          git commit -m "Audio y RSS diarios generados con IA" || exit 0
           git push
