@@ -43,7 +43,8 @@ def obtener_noticias_rss(url):
 
 def obtener_briefing():
     """Recopila titulares y genera el resumen diario utilizando Gemini."""
-    rss_suiza = "https://www.swissinfo.ch/spa/rss"
+    # URL de RSS activa para noticias de Suiza en español
+    rss_suiza = "https://www.swissinfo.ch/spa/rss/index"
     titulares_suiza = obtener_noticias_rss(rss_suiza)
 
     prompt = f"""
@@ -57,8 +58,9 @@ def obtener_briefing():
     """
 
     try:
+        # Actualizado a gemini-3.8-flash según lo requerido por la API
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=prompt,
         )
         return response.text
