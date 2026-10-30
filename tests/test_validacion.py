@@ -236,6 +236,13 @@ Un párrafo largo de cierre sin fuente """ + " ".join(["extra"] * 30)
         self.assertIn("Nueva York", prompt)
         self.assertIn("fecha del último cierre", prompt)
 
+    def test_prompt_fuentes_coincide_con_el_validador(self):
+        prompt = g.construir_prompt(datetime(2026, 10, 30, 5, 30, tzinfo=ZoneInfo("Europe/Zurich")))
+        self.assertIn("ocho campos", prompt)
+        self.assertNotIn("siete campos", prompt)
+        self.assertIn("| Traducción española literal de la evidencia de 12 a 80 palabras", prompt)
+
+
     def test_separar_respuesta_quita_marcas_y_estructura_fuentes(self):
         respuesta = (
             "GUION:\nMundo:\n" + FRASES["S1"] + ". [S1]\n\nFUENTES:\n"
