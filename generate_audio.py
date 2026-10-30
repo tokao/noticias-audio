@@ -7,10 +7,10 @@ from datetime import datetime
 from google import genai
 import edge_tts
 
-# Inicializar cliente con el SDK oficial
+# Inicialización del cliente de Gemini
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 
-# Configuración de voz para edge-tts
+# Configuración de voz y archivos
 VOICE = "es-ES-AlvaroNeural"
 AUDIO_FILE = "noticias.mp3"
 RSS_FILE = "rss.xml"
@@ -40,8 +40,8 @@ def obtener_noticias_rss(url):
 
 def obtener_briefing():
     """Recopila titulares y genera el resumen diario utilizando Gemini."""
-    # Feed RSS estable de noticias en español
-    rss_url = "https://www.rtve.es/api/noticias.rss"
+    # Feed RSS funcional en español (BBC Mundo)
+    rss_url = "https://feeds.bbci.co.uk/mundo/rss.xml"
     titulares = obtener_noticias_rss(rss_url)
 
     prompt = f"""
@@ -55,9 +55,9 @@ def obtener_briefing():
     """
 
     try:
-        # Se usa el modelo flash estándar disponible
+        # Se especifica gemini-3.8-flash según lo requerido por la API
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=prompt,
         )
         return response.text
