@@ -1,38 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <item>
-      <title>Boletín 2026-10-30</title>
-      <description>Resumen diario de noticias e información cultural.</description>
-      <pubDate>Fri, 30 Oct 2026 12:21:49 GMT</pubDate>
-      <enclosure url="https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3" length="1000000" type="audio/mpeg"/>
-      <guid>https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3</guid>
-    </item>
-    <item>
-      <title>Boletín 2026-10-30</title>
-      <description>Resumen diario de noticias e información cultural.</description>
-      <pubDate>Fri, 30 Oct 2026 12:14:35 GMT</pubDate>
-      <enclosure url="https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3" length="1000000" type="audio/mpeg"/>
-      <guid>https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3</guid>
-    </item>
-    <item>
-      <title>Boletín 2026-10-30</title>
-      <description>Resumen diario de noticias e información cultural.</description>
-      <pubDate>Fri, 30 Oct 2026 12:07:32 GMT</pubDate>
-      <enclosure url="https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3" length="1000000" type="audio/mpeg"/>
-      <guid>https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3</guid>
-    </item>
     <title>Boletín Diario de Noticias</title>
     <link>https://tokao.github.io/noticias-audio/</link>
-    <language>es</language>
+    <atom:link href="https://tokao.github.io/noticias-audio/rss.xml" rel="self" type="application/rss+xml"/>
     <description>Boletín diario personalizado generado automáticamente.</description>
+    <language>es-es</language>
+    <itunes:author>tokao</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="News"/>
     <itunes:image href="https://tokao.github.io/noticias-audio/cover.png"/>
+    <lastBuildDate>Fri, 30 Oct 2026 13:35:16 GMT</lastBuildDate>
     <item>
       <title>Boletín 2026-10-30</title>
-      <description>Resumen diario de noticias e información cultural.</description>
-      <pubDate>Fri, 30 Oct 2026 11:52:58 GMT</pubDate>
-      <enclosure url="https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3" length="1000000" type="audio/mpeg"/>
-      <guid>https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3</guid>
+      <description>Buenos días. Estos son los titulares de hoy.
+Hackeo a la empresa Binance afecta US$6.300 millones en activos digitales, en el mayor robo de criptomonedas conocido (y con impacto en América Latina)
+"No hay palabras para describir tanto dolor": Urda, el pueblo que se movilizó para ayudar a las víctima...</description>
+      <pubDate>Fri, 30 Oct 2026 13:35:10 GMT</pubDate>
+      <guid isPermaLink="false">boletin-2026-10-30</guid>
+      <enclosure url="https://tokao.github.io/noticias-audio/episodes/boletin_2026-10-30.mp3" length="265536" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
