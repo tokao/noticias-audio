@@ -2,7 +2,7 @@ name: Generar Audio y RSS Diario
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # 06:00 UTC (07:00/08:00 en España)
+    - cron: '0 6 * * *'   # 06:00 UTC = 07:00 en Ginebra (08:00 en verano)
   workflow_dispatch:
 
 concurrency:
@@ -12,9 +12,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
-      models: read
 
     steps:
       - name: Descargar repositorio
@@ -32,8 +32,9 @@ jobs:
 
       - name: Generar audio y actualizar RSS
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Ajusta si tu usuario/repo es distinto
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          VOICE: es-ES-ElviraNeural
           BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
         run: python generate_audio.py
 
@@ -42,6 +43,6 @@ jobs:
           touch .nojekyll
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add -A episodes rss.xml episodes.json .nojekyll
+          git add -A episodes rss.xml episodes.json guion_ultimo.txt .nojekyll
           git commit -m "Episodio diario $(date -u +%F)" || exit 0
           git push
