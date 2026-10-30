@@ -125,12 +125,56 @@ def post_json(url, body, headers, timeout=300):
         raise RuntimeError(f"HTTP {e.code}: {e.read()[:300]!r}") from None
 
 
+# Modelos de Groq con búsqueda web, por orden de preferencia.
+#  - "compound": buscan en la web por sí mismos.
+#  - "gpt-oss": necesitan activar la herramienta browser_search.
+GROQ_CANDIDATOS = [
+    (GROQ_MODEL, None),
+    ("groq/compound-mini", None),
+    ("compound-beta", None),
+    ("compound-beta-mini", None),
+    ("openai/gpt-oss-120b", "browser_search"),
+    ("openai/gpt-oss-20b", "browser_search"),
+]
+GROQ_HEADERS = lambda: {"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}",
+                        "User-Agent": "noticias-audio/1.0 (GitHub Actions)"}
+
+
+def modelos_groq():
+    req = urllib.request.Request("https://api.groq.com/openai/v1/models", headers=GROQ_HEADERS())
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            ids = sorted(m["id"] for m in json.load(r)["data"])
+        print("Modelos disponibles en tu cuenta de Groq:", ", ".join(ids))
+        return set(ids)
+    except Exception as e:
+        print(f"  ! No se pudo listar los modelos de Groq: {e}")
+        return None
+
+
 def con_groq(prompt):
-    data = post_json(
-        "https://api.groq.com/openai/v1/chat/completions",
-        {"model": GROQ_MODEL, "messages": [{"role": "user", "content": prompt}], "temperature": 0.3},
-        {"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"})
-    return data["choices"][0]["message"]["content"], []
+    disponibles = modelos_groq()
+    errores = []
+    for modelo, herramienta in dict.fromkeys(GROQ_CANDIDATOS):
+        if disponibles is not None and modelo not in disponibles:
+            continue
+        body = {"model": modelo, "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.3, "max_completion_tokens": 8000}
+        if herramienta:
+            body["tools"] = [{"type": herramienta}]
+            body["tool_choice"] = "auto"
+        try:
+            print(f"  Probando {modelo}...")
+            data = post_json("https://api.groq.com/openai/v1/chat/completions", body, GROQ_HEADERS())
+            texto = data["choices"][0]["message"].get("content") or ""
+            if len(texto.split()) < 300:
+                raise RuntimeError(f"respuesta demasiado corta ({len(texto.split())} palabras)")
+            print(f"  Usado el modelo {modelo}.")
+            return texto, []
+        except Exception as e:
+            errores.append(f"{modelo}: {e}")
+            print(f"  ! {modelo}: {str(e)[:300]}")
+    raise RuntimeError("ningún modelo de Groq con búsqueda web ha funcionado")
 
 
 def con_gemini(prompt):
