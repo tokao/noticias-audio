@@ -5,6 +5,7 @@
     <link>https://tokao.github.io/noticias-audio/</link>
     <language>es</language>
     <description>Boletín diario personalizado generado automáticamente.</description>
+    <itunes:image href="https://tokao.github.io/noticias-audio/cover.png"/>
     <item>
       <title>Boletín 2026-10-30</title>
       <description>Resumen diario de noticias e información cultural.</description>
