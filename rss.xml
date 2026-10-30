@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
+    <item>
+      <title>Boletín 2026-10-30</title>
+      <description>Resumen diario de noticias e información cultural.</description>
+      <pubDate>Fri, 30 Oct 2026 12:07:32 GMT</pubDate>
+      <enclosure url="https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3" length="1000000" type="audio/mpeg"/>
+      <guid>https://tokao.github.io/noticias-audio/boletin_2026-10-30.mp3</guid>
+    </item>
     <title>Boletín Diario de Noticias</title>
     <link>https://tokao.github.io/noticias-audio/</link>
     <language>es</language>
