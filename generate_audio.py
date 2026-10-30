@@ -9,12 +9,11 @@ from email.utils import format_datetime
 from xml.sax.saxutils import escape
 
 import edge_tts
-from google import genai
 
 # --- Configuración ---------------------------------------------------------
 # URL pública donde se sirve el repo (GitHub Pages). Sin barra final.
 BASE_URL = os.environ.get("BASE_URL", "https://tokao.github.io/noticias-audio").rstrip("/")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
+GITHUB_MODEL = os.environ.get("GITHUB_MODEL", "openai/gpt-4o-mini")
 VOICE = "es-ES-AlvaroNeural"
 
 EPISODES_DIR = "episodes"        # aquí van los mp3, uno por día
@@ -58,9 +57,36 @@ Redacta el texto de forma clara, natural y concisa en español.
 Devuelve SOLO el texto que se va a leer en voz alta: sin markdown, sin asteriscos,
 sin títulos y sin acotaciones como [música] o (pausa).
 """
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    response = client.models.generate_content(model=GEMINI_MODEL, contents=prompt)
-    return limpiar_texto(response.text)
+    # 1) GitHub Models (gratis en Actions con el GITHUB_TOKEN)
+    if os.environ.get("GITHUB_TOKEN"):
+        try:
+            texto = generar_con_github_models(prompt)
+            print("Guion generado con GitHub Models.")
+            return limpiar_texto(texto)
+        except Exception as e:
+            print(f"GitHub Models no disponible: {str(e)[:200]}")
+
+    # 2) Último recurso: leer los titulares tal cual
+    print("Usando titulares sin resumir.")
+    return "Buenos días. Estos son los titulares de hoy.\n" + titulares.replace("- ", "")
+
+
+def generar_con_github_models(prompt):
+    body = json.dumps({
+        "model": GITHUB_MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        "https://models.github.ai/inference/chat/completions",
+        data=body,
+        headers={
+            "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+            "Accept": "application/vnd.github+json",
+            "Content-Type": "application/json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.load(r)["choices"][0]["message"]["content"]
 
 
 def limpiar_texto(texto):
