@@ -2,8 +2,12 @@ name: Generar Audio y RSS Diario
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 6 * * *'   # 06:00 UTC (07:00/08:00 en España)
   workflow_dispatch:
+
+concurrency:
+  group: daily-audio
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -23,18 +27,20 @@ jobs:
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
-          pip install edge-tts google-genai
+          pip install --upgrade edge-tts google-genai
 
       - name: Generar audio y actualizar RSS
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: |
-          python generate_audio.py
+          # Ajusta si tu usuario/repo es distinto
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: python generate_audio.py
 
       - name: Guardar audio y RSS en GitHub
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *.mp3 rss.xml || true
-          git commit -m "Audio y RSS diarios generados automáticamente" || exit 0
+          touch .nojekyll
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A episodes rss.xml episodes.json .nojekyll
+          git commit -m "Episodio diario $(date -u +%F)" || exit 0
           git push
