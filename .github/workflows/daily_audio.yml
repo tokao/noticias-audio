@@ -22,7 +22,7 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install edge-tts google-genai
+          pip install edge-tts google-generativeai
 
       - name: Generar audio y actualizar RSS
         env:
