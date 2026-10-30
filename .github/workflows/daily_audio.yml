@@ -1,16 +1,16 @@
-name: Generar Audio Diario
+name: Generar Audio y RSS Diario
 
 on:
   schedule:
-    # Se ejecuta todos los días a las 06:00 UTC
+    # Se ejecuta todos los días a las 06:00 UTC (ajusta la hora si lo prefieres)
     - cron: '0 6 * * *'
-  workflow_dispatch: # Permite ejecutarlo manualmente cuando quieras
+  workflow_dispatch: # Permite ejecutarlo manualmente cuando quieras desde la pestaña Actions
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Otorga permiso para guardar archivos en el repositorio
+      contents: write # Otorga permisos para guardar los nuevos archivos en el repositorio
 
     steps:
       - name: Descargar repositorio
@@ -21,11 +21,11 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Instalar librerías necesarias
+      - name: Instalar dependencias
         run: |
           pip install edge-tts
 
-      - name: Generar archivo de audio
+      - name: Generar audio y actualizar RSS
         run: |
           python generate_audio.py
 
@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add boletin_diario.mp3 rss.xml
+          git add *.mp3 rss.xml
           git commit -m "Audio y RSS diarios generados automáticamente" || exit 0
           git push
