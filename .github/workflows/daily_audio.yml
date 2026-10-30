@@ -20,9 +20,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Instalar dependencias
+        - name: Instalar dependencias
         run: |
-          pip install edge-tts google-generativeai
+          python -m pip install --upgrade pip
+          pip install edge-tts google-genai
 
       - name: Generar audio y actualizar RSS
         env:
