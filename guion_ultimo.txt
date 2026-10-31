@@ -1,66 +1,63 @@
-Buenos días. Este es el briefing del viernes 30 de octubre de 2026, actualizado a las 16:43, hora de Ginebra.
+Buenos días. Este es el briefing del sábado 31 de octubre de 2026, actualizado a las 13:02, hora de Ginebra. 
 
-Resumen ejecutivo:
-1. Los mercados globales caen: el S&P 500 pierde un 1,2 % y el Nasdaq un 2,2 % tras la noticia de que los gigantes tecnológicos aumentan su gasto en inteligencia artificial, lo que dispara la venta de acciones y eleva los bonos a su mayor ganancia mensual en casi tres años. 
-2. En Estados Unidos continúan las elecciones intermedias; el presidente Donald Trump cancela sus mítines de fin de semana, mientras que los votantes jóvenes demócratas superan con claridad a los republicanos en la votación anticipada. 
-3. Tres petroleros son detenidos por minas en el estrecho de Ormuz, según Irán, lo que vuelve a encender la preocupación por la seguridad del suministro de crudo. 
-4. En España, la huelga de maquinistas obliga a Renfe y a Ouigo a cancelar cientos de trenes, mientras que el sector sanitario vasco mantiene servicios mínimos al 100 % en urgencias y PAC. 
-5. En Ginebra, una colisión entre una coche y un trolleybus en la zona de Bel‑Air provoca la interrupción de ocho líneas de los transportes públicos, aunque el servicio se normaliza antes de las 10 h. 
-6. En Barcelona, la Ronda de Dalt y la Ronda Litoral registran retenciones de varios kilómetros y la línea L2 del metro permanecerá cerrada entre La Pau y Gorg hasta el 3 de diciembre por obras. 
-7. En Bilbao, la Policía Nacional detiene al presunto líder de la cuenta “Blocus Bilbao”, que había incitado a saqueos y distribuido manuales para fabricar explosivos antes de la noche de Halloween. 
-8. Los principales índices europeos cierran al alza: Euro Stoxx 50 sube un 0,72 % a 6 212 puntos, el CAC 40 gana un 1,05 % a 7 970 y el SMI avanza un 1,29 % a 14 769.
+Resumen ejecutivo 
+1. La red anónima Blocus ha convocado disturbios en Madrid, Barcelona y Bilbao, provocando un despliegue policial masivo. 
+2. El aeropuerto de Ginebra evacuó a 2.500 personas tras una fuerte olor a solvente, pero el riesgo se descartó. 
+3. Los controles fronterizos temporales entre Francia y Suiza se mantienen hasta el 31 de octubre, afectando a los trabajadores transfronterizos. 
+4. El gigante de criptomonedas Binance sufrió el mayor robo de su historia, con 6,3 millonios de dólares sustraídos en 20 minutos. 
+5. El mercado estadounidense cerró en caída, con el S&P 500 y el Nasdaq sufriendo pérdidas de 1,8 % y 2,9 % respectivamente, impulsado por temores de gasto en IA. 
+6. La actividad manufacturera en China se contrajo por tercera vez en cuatro meses, con el PMI de manufactura en 49,3. 
+7. OpenAI redujo su objetivo de financiación a 20 mil millones de dólares, mientras Nvidia considera respaldar deuda para un nuevo centro de datos de IA. 
+8. El precio del euro frente al dólar subió a 1,1167 y el euro frente al franco suizo a 0,9211. 
 
-Pasemos a la información por regiones.
+Pasamos a España. 
+El movimiento Blocus, una red digital que promueve disturbios, ha convocado concentraciones en Madrid, Barcelona y Bilbao para la noche de Halloween. Más de 500 agentes de la Policía Nacional, la Guardia Civil y los Mossos d'Esquadra están desplegados en las arterias comerciales de la capital y en la Gran Vía de Barcelona, con el objetivo de prevenir saqueos y actos de vandalismo. En Madrid, la policía ha reforzado la “milla de oro” con blindaje de escaparates de marcas de lujo, mientras que en Barcelona los Mossos han activado una alerta de nivel cuatro. Los trabajadores transfronterizos que cruzan la frontera con Francia se enfrentan a controles adicionales y a la posibilidad de retrasos de 15 a 30 minutos en el aeropuerto trinacional de Basilea/Mulhouse-Freiburg. Según la fuente oficial, los controles se mantendrán hasta el 31 de octubre, fecha de finalización de la cumbre del G7 en Évian-les-Bains. 
 
-Mundo:
-Los gigantes tecnológicos estadounidenses incrementan su inversión en IA, lo que genera temores entre los inversores y provoca una fuerte caída del Nasdaq y del sector tecnológico, según Reuters. La caída de Intel (más del 25 %) y de Amazon (un 6 %) arrastra el índice Nasdaq a su nivel más bajo en casi tres meses. La noticia también menciona un posible hack a gran escala en Binance que ha deprimido el precio del bitcoin. 
-En el estrecho de Ormuz, la Guardia Revolucionaria iraní afirma que tres petroleros fueron detenidos tras impactar minas y que un superpetrolero explotó, elevando la tensión en una zona ya conflictiva, según informó Arab News con datos de Reuters. 
-En EE. UU., la campaña electoral de mitad de mandato avanza: Donald Trump cancela sus últimos mítines de fin de semana, mientras que los jóvenes demócratas lideran la votación anticipada, según CNN Español. Elon Musk, en X, insta a los votantes a apoyar a los republicanos y advierte sobre posibles cambios constitucionales si ganan.
+Pasamos a Barcelona. 
+En la capital catalana, la policía ha instalado un dispositivo de nivel cuatro en la zona de la Plaza de Catalunya, tras la convocatoria de Blocus. Los Mossos han reforzado la presencia en la zona de la Gran Vía y en la zona de la Sagrada Familia, con la intención de impedir la dispersión de manifestantes. Se han registrado 40 actas de infracción y 200 identificados, la mayoría jóvenes, y se han encontrado armas y líquidos corrosivos en varias personas. El presidente de la Generalitat, Salvador Illa, ha advertido que los que intenten saquear serán procesados. 
 
-España:
-La huelga de maquinistas, convocada por los sindicatos Semaf, CGT y otros, obliga a Renfe a suprimir el 12,5 % de los servicios comerciales y a Ouigo a cancelar 40 trenes, afectando a unos 20 000 pasajeros. La medida se produce tras el accidente ferroviario de Urda, que dejó 69 muertos. La información proviene de Euronews. 
-En el País Vasco, la huelga de Osakidetza se mantiene con servicios mínimos del 100 % en urgencias, PAC y emergencias, mientras que la atención primaria funciona con el personal de un sábado, según Cadena SER. 
-En Bilbao, la Policía Nacional detuvo a un joven de 20 años, presunto administrador de la cuenta “Blocus Bilbao”, que había difundido instrucciones para saquear comercios y fabricar artefactos explosivos. La detención se realizó en Basauri y forma parte de una operación conjunta con la Guardia Civil, informó ABC.
+Pasamos a Bilbao y Bizkaia. 
+En Bilbao, la policía ha desplegado unidades de contención en la zona de la Plaza de la Constitución y en la zona de la Universidad del País Vasco. Se han detenido a varios jóvenes vinculados a la red Blocus y se han registrado 9 arrestados en la zona de la zona de la Universidad del País Vasco. Los trabajadores transfronterizos que cruzan la frontera con Francia se enfrentan a controles adicionales y a la posibilidad de retrasos de 15 a 30 minutos en el aeropuerto trinacional de Basilea/Mulhouse-Freiburg. 
 
-Barcelona:
-El Servei Català de Trànsit informa de retenciones de hasta cinco kilómetros en la Ronda Litoral (B‑10) y de varios kilómetros en la Ronda de Dalt (B‑20), además de incidentes en la C‑58 y la C‑31 que generan congestión. 
-La línea L2 del metro quedará cerrada entre La Pau y Gorg a partir del 2 de noviembre y hasta el 3 de diciembre por obras de infraestructura; se habilitarán lanzaderas de autobús con frecuencias de tres a cinco minutos, según TMB. 
-Se prevén desvíos en la Cursa Montjuïc‑Tibidabo el domingo 1 de noviembre, lo que afectará a 29 líneas de autobús; la autoridad de movilidad recomienda usar el metro. 
-En Rodalies, más de la mitad de los trenes AVE y Avant presentan retrasos superiores a los cinco minutos, y el Alvia Barcelona‑Bilbao ha sido suprimido.
+Pasamos a Ginebra y alrededores. 
+El aeropuerto de Ginebra evacuó a 2.500 personas a las 4:40 de la mañana tras una fuerte olor a solvente, provocada por trabajos nocturnos de revestimiento de suelo. El servicio de rescate y de lucha contra incendios de aeronaves (SSLIA) y los bomberos del SIS llevaron a cabo la evacuación, que se completó a las 5:30. El primer vuelo salió a las 6:30 con un retraso de 20 minutos. No se detectó ningún riesgo y el riesgo se descartó tras la inspección de la calidad del aire. 
 
-Bilbao y Bizkaia:
-La detención del líder de “Blocus Bilbao” se produce en el contexto de alertas de seguridad antes de la noche de Halloween; la investigación sigue abierta para determinar posibles vínculos con otras ciudades, según ABC. 
-La huelga de Osakidetza afecta a los hospitales vascos, pero los servicios críticos se mantienen operativos al nivel de un día festivo, informó Cadena SER.
+En cuanto a la frontera franco-suiza, los controles temporales se mantienen hasta el 31 de octubre, como parte de la operación de seguridad del G7. Los trabajadores transfronterizos deben presentar pasaportes o documentos de identidad y pueden experimentar retrasos de 15 a 30 minutos en la autopista A40 cerca de Ginebra. 
 
-Ginebra y alrededores:
-A las 8 h 27, una colisión entre una coche y un trolleybus de la línea 2 de los TPG, en la intersección de la rue de la Corraterie y la rue de la Confédération, provocó la interrupción de ocho líneas, incluidas las de tranvía 12, 14, 17 y 18. No se reportaron heridos y el servicio volvió a la normalidad antes de las 10 h, según 20 min. 
-En el aeropuerto de Ginebra, los vuelos internacionales continúan operando sin mayores incidencias, aunque se mantiene la alerta de viento cruzado que afecta a los despegues de aviones de gran porte. 
-En el sector ferroviario, el CFF sugiere revisar los horarios de los trenes InterCity que cruzan la frontera franco‑suiza, ya que los controles de pasaporte se han intensificado tras la reciente ola de migrantes. 
-La energía eléctrica en el cantón muestra una ligera sobrecarga en la zona de Grand Genève; la empresa eléctrica Swissgrid ha activado reservas de generación hidroeléctrica para evitar cortes, según el comunicado oficial del cantón. 
-El CERN celebra la publicación de los primeros resultados del experimento Future Circular Collider, que podrían abrir la puerta a nuevas partículas de alta energía; el anuncio se realizó en el marco de la conferencia de prensa del director general, según el sitio oficial del CERN.
+En cuanto a la movilidad pública, el servicio de transporte público de Ginebra (TPG) no ha reportado cierres de líneas ni obras importantes. La red de ciclovías y el servicio de trenes de la estación Cornavin están operando normalmente. No se han emitido alertas meteorológicas activas en el cantón de Ginebra. 
 
-Mercados:
-En EE. UU., el Dow Jones Industrial Average cerró a 52 139,41 puntos, una caída del 0,39 %; el S&P 500 terminó en 7 626,38, perdiendo un 1,22 %; y el Nasdaq Composite bajó a 25 606,33, un descenso del 2,21 %, según Yahoo Finance. 
-En Europa, el Euro Stoxx 50 subió un 0,72 % a 6 212 puntos; el CAC 40 ganó un 1,05 % y alcanzó los 7 970; el SMI subió un 1,29 % a 14 769, según Newsquawk. 
-En el sector tecnológico, Alphabet cayó un 12,6 % en Wall Street, borrando 500 000 millones de dólares de capitalización, mientras que Intel perdió más del 25 % y Amazon un 6 %, datos extraídos del informe de Reuters sobre el gasto en IA. 
-El par EUR/USD cotiza a 1,1163, ligeramente por debajo del cierre anterior de 1,1178, según la biblioteca de mercados de Exa.ai. El par EUR/CHF se sitúa en 0,9196, con un leve aumento respecto al cierre previo de 0,9195, también según Exa.ai. 
-Los precios del crudo suben más del 2 % y se encaminan a su cuarto aumento mensual, impulsados por el incidente en Ormuz; el oro cayó a 3 970 USD la onza, su nivel más bajo desde julio, mientras que el precio del gas natural se mantiene estable alrededor de 2,85 USD por MMBtu. 
-Los bonos del Tesoro estadounidense a 10 años cayeron 8 puntos básicos a 4,91 %, mientras que los bonos suizos subieron, reforzando al franco como refugio seguro.
+Pasamos a Mercados. 
+El mercado estadounidense cerró en caída el viernes 30 de octubre, con el S&P 500 a 7 580,07, una caída de 1,8 %. El Nasdaq Composite cerró en 25 437, una caída de 2,9 %, y el Dow Jones Industrial Average cerró en 51 770,31, una caída de 1,1 %. Los precios de las acciones de Intel y Amazon se desplomaron, lo que ha aumentado la preocupación por el gasto en IA. 
 
-Cierre:
-Eso es todo por hoy. Manténganse informados y cuiden su seguridad en los desplazamientos. Hasta mañana.
+El Euro Stoxx 50 cerró en 6 131,31, una caída de 1,2 %. El IBEX 35 cerró en 18 652,90, una caída de 1,1 %. El CAC 40 cerró en 7 969,42, una caída de 0,01 %. El SMI suizo cerró en 14 810,66, una subida de 0,36 %. 
+
+El euro frente al dólar subió a 1,1167, un incremento de 0,08 %. El euro frente al franco suizo subió a 0,9211, un incremento de 0,02 %. 
+
+En el sector tecnológico, OpenAI ha reducido su objetivo de financiación a 20 mil millones de dólares, según un informe de Reuters. Nvidia está considerando respaldar deuda para un nuevo centro de datos de IA de Anthropic, con un contrato de 44,6 mil millones de dólares. OpenAI también ha reforzado las salvaguardas de violencia en ChatGPT, limitando la información sobre armas y sistemas de seguridad para usuarios menores de edad. 
+
+En el sector de criptomonedas, Binance sufrió el mayor robo de su historia, con 6,3 millonios de dólares sustraídos en 20 minutos. Los atacantes han aprovechado la infraestructura de firma de Binance para mover fondos a direcciones fuera del alcance de la plataforma. Se han congelado aproximadamente la mitad de los activos robados por los emisores de stablecoins. 
+
+En el sector industrial, la actividad manufacturera en China se contrajo por tercera vez en cuatro meses, con el PMI de manufactura en 49,3. La demanda interna sigue siendo débil y las exportaciones se han visto afectadas por la caída de las órdenes de Navidad. 
+
+En el ámbito militar, el Departamento de Estado de EE. UU. aprobó la venta de 500 misiles Patriot PAC‑3 a Ucrania por un valor estimado de 2,1 mil millones de dólares, en una de las mayores entregas de defensa a Kiev desde el inicio de la segunda administración de Trump. 
+
+Cierre breve. 
+En resumen, el día de hoy se ha visto marcado por disturbios en España, una evacuación aeroportuaria en Ginebra, controles fronterizos en Francia y Suiza, un robo masivo en Binance, caídas en los mercados estadounidenses y europeos, y movimientos significativos en el sector tecnológico y militar. Manténganse informados y sigan las indicaciones de las autoridades locales.
 
 FUENTES:
-Mundo | Tech giants’ spending spooks investors and drives bonds rally | Reuters | https://au.investing.com/news/economy-news/stocks-slump-bonds-leap-as-ai-giants-spending-spooks-investors-4728099
-Mundo | Three tankers strike mines and catch fire in Strait of Hormuz, Iran claims | Arab News (Reuters) | https://www.arabnews.com/middle-east/iran-guards-say-three-tankers-halted-in-hormuz-3008990
-Mundo | Última hora de las elecciones intermedias de EE.UU., en vivo | CNN Español | https://cnnespanol.cnn.com/2026/10/30/eeuu/live-news/elecciones-intermedias-ee-uu-en-vivo-trax
-España | La huelga de maquinistas en España provoca cancelaciones en Renfe y deja a Ouigo sin trenes durante 2 días | Euronews | https://es.euronews.com/2026/10/30/huelga-maquinistas-espana-provoca-cancelaciones-renfe-ouigo
-España | Huelga en Osakidetza hoy, 30 de octubre: servicios mínimos del 100 % en urgencias, PAC y emergencias | Cadena SER | https://cadenaser.com/euskadi/2026/10/30/huelga-en-osakidetza-hoy-30-de-octubre-servicios-minimos-del-100-en-urgencias-pac-y-emergencias-radio-bilbao/
-Bilbao | La Policía detiene al líder de Blocus en Bilbao que preparaba saqueos | ABC | https://www.abc.es/espana/pais-vasco/policia-detiene-lider-blocus-bilbao-preparaba-saqueos-20261030142004-nt.html
-Barcelona | Última hora del tráfico y trenes de Rodalies en Catalunya hoy: accesos a Barcelona y cortes de carretera este viernes 30 de octubre, en directo | La Vanguardia | https://www.lavanguardia.com/local/catalunya/20261030/11671067/trafico-carreteras-cortes-trenes-rodalies-accesos-barcelona-cataluna-viernes-30-octubre-en-directo.html
-Ginebra | Genève : une collision voiture-bus a perturbé huit lignes TPG | 20 min | https://www.20min.ch/fr/story/geneve-voiture-contre-un-bus-et-grosse-pagaille-sur-le-reseau-tpg-103658789
-Ginebra | Información oficial del cantón de Ginebra sobre energía y transporte | Gobierno del cantón de Ginebra | https://www.ge.ch/
-EEUU | S&P 500, Dow Jones y Nasdaq al cierre del viernes 30 octubre | Yahoo Finance | https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-sink-amazon-intel-114737736.html
-Europa | Newsquawk Daily European Equity Opening News – 30 Oct 2026 | Newsquawk | https://www.newsquawk.com/headlines/newsquawk-daily-european-equity-opening-news---30th-october-2026
-Divisas | EUR/USD cotización 30 oct 2026 | Exa.ai | https://exa.ai/library/markets/forex/EURUSD
-Divisas | EUR/CHF cotización 30 oct 2026 | Exa.ai | https://exa.ai/library/markets/forex/EURCHF
+Mundo | Blocus, hoy en directo: última hora de las protestas y disturbios convocados en España el sábado 31 de octubre | El Confidencial | https://www.elconfidencial.com/espana/2026-10-31/blocus-disturbios-31-octubre-madrid-barcelona-directo_4456323/
+Ginebra | Ginebra: evacuación de 2500 personas a la hora de una fuerte olor de solvente | 20min.ch | https://www.20min.ch/fr/story/aeroport-de-geneve-une-forte-odeur-de-dissolvant-pres-de-2500-personnes-evacues-103659233/
+Ginebra | El plan de seguridad del G7 en Francia provoca controles fronterizos temporales con Suiza | Visahq | https://www.visahq.news/es/2026-10-21/ch/frances-g7-security-plan-triggers-temporary-border-checks-with-switzerland/
+Tecnología | Explainer-Gone in 20 minutes: How the biggest heist in crypto history unfolded | Reuters | https://www.investing.com/news/stock-market-news/explainergone-in-20-minutes-how-the-biggest-heist-in-crypto-history-unfolded-4986851/
+Tecnología | China’s factory activity shrinks in October, third contraction in four months | Reuters | https://www.investing.com/news/economy-news/chinas-october-factory-activity-contracts-at-fastest-pace-in-3-months-pmi-survey-shows-4989032/
+Tecnología | OpenAI reportedly trims fundraising target to $20 billion | Reuters | https://malpass.co/top-ai-stories-2026-10-31/
+Tecnología | Nvidia considers backing debt for an Anthropic-linked data center | Reuters | https://malpass.co/top-ai-stories-2026-10-31/
+Tecnología | OpenAI tightens ChatGPT’s violence-prevention safeguards for teens | Reuters | https://malpass.co/top-ai-stories-2026-10-31/
+Mercados | Wall Street closes sharply lower as AI cash burn fears spark tech selloff | Moneycontrol | https://www.moneycontrol.com/news/business/markets/wall-street-closes-sharply-lower-as-ai-cash-burn-fears-spark-tech-selloff-14064895.html/
+Mercados | Euro Stoxx 50 closes at 6,131.31 | Yahoo Finance | https://finance.yahoo.com/quote/%5ESTOXX50E/history?period1=1730000000&period2=1730000000/
+Mercados | IBEX 35 closes at 18,652.90 | Yahoo Finance | https://finance.yahoo.com/quote/%5EIBEX/
+Mercados | CAC 40 closes at 7,969.42 | https://exa.ai/library/markets/index/CAC40?date=2026-10-30&view=daily/
+Mercados | SMI closes at 14,810.66 | https://www.ad-hoc-news.de/boerse/news/marktberichte/smi-closes-0-36-percent-higher-at-14-810-66-points/70436749/
+Mercados | EUR/USD quote 1.116675 | https://exa.ai/library/markets/forex/EURUSD/
+Mercados | EUR/CHF quote 0.921058 | https://exa.ai/library/markets/forex/EURCHF/
+Militar | US approves $2.1 billion Patriot missile sale to Ukraine | Reuters | https://www.investing.com/news/stock-market-news/us-approves-21-billion-patriot-missile-sale-to-ukraine-4988538/
