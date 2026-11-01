@@ -25,7 +25,7 @@ import edge_tts
 BASE_URL = os.environ.get("BASE_URL", "https://tokao.github.io/noticias-audio").rstrip("/")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "groq/compound")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
-VOICE = os.environ.get("VOICE", "es-ES-ElviraNeural")
+VOICE = os.environ.get("VOICE", "es-ES-AlvaroNeural")
 RATE = os.environ.get("RATE", "-5%")
 TZ = ZoneInfo("Europe/Zurich")
 
