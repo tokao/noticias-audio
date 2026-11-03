@@ -1,63 +1,67 @@
-Buenos días. Este es el briefing del sábado 31 de octubre de 2026, actualizado a las 13:02, hora de Ginebra. 
+Buenos días. Este es el briefing del martes 3 de noviembre de 2026, actualizado a las 14:57, hora de Ginebra.
 
-Resumen ejecutivo 
-1. La red anónima Blocus ha convocado disturbios en Madrid, Barcelona y Bilbao, provocando un despliegue policial masivo. 
-2. El aeropuerto de Ginebra evacuó a 2.500 personas tras una fuerte olor a solvente, pero el riesgo se descartó. 
-3. Los controles fronterizos temporales entre Francia y Suiza se mantienen hasta el 31 de octubre, afectando a los trabajadores transfronterizos. 
-4. El gigante de criptomonedas Binance sufrió el mayor robo de su historia, con 6,3 millonios de dólares sustraídos en 20 minutos. 
-5. El mercado estadounidense cerró en caída, con el S&P 500 y el Nasdaq sufriendo pérdidas de 1,8 % y 2,9 % respectivamente, impulsado por temores de gasto en IA. 
-6. La actividad manufacturera en China se contrajo por tercera vez en cuatro meses, con el PMI de manufactura en 49,3. 
-7. OpenAI redujo su objetivo de financiación a 20 mil millones de dólares, mientras Nvidia considera respaldar deuda para un nuevo centro de datos de IA. 
-8. El precio del euro frente al dólar subió a 1,1167 y el euro frente al franco suizo a 0,9211. 
+Resumen ejecutivo:
+1. En Estados Unidos se celebran las elecciones de medio mandato, con los demócratas liderando las encuestas y la atención mundial centrada en el futuro del Congreso. (Reuters, Swissinfo) 
+2. El precio internacional del crudo repunta por encima de los 106 dólares el barril de Brent y 98 dólares el WTI, tras una nueva escalada de tensiones entre EE. UU. e Irán. (Reuters, Diario Neuquino) 
+3. El IBEX 35 pierde un 0,85 % y cierra bajo los 18.800 puntos, mientras la banca española se desploma y Repsol lidera la subida gracias al repunte del petróleo. (Benzinga) 
+4. La UE discute la flexibilización del AI Act; Alemania pide una normativa más ligera para impulsar la IA y la infraestructura de centros de datos. (Reuters, MarketScreener) 
+5. En Ginebra, Francia reactivará los controles fronterizos con Suiza a partir de hoy, lo que podría alargar los tiempos de espera de los 180 000 trabajadores transfronterizos. (Visahq) 
+6. El túnel principal de Artxanda en Bilbao se cierra para obras hasta abril de 2027, generando desvíos y congestión en la zona norte de la ciudad. (El Correo) 
+7. En Barcelona, el Ayuntamiento aprueba una modificación del Plan General Metropolitano que permitirá prohibir o limitar los alquileres de temporada en barrios con escasez de vivienda. (El Diario) 
+8. El experimento LHCb del CERN anuncia evidencia de una desintegración de partícula “beauty” con una probabilidad de uno entre diez mil millones, un hito para la física más allá del Modelo Estándar. (CERN)
 
-Pasamos a España. 
-El movimiento Blocus, una red digital que promueve disturbios, ha convocado concentraciones en Madrid, Barcelona y Bilbao para la noche de Halloween. Más de 500 agentes de la Policía Nacional, la Guardia Civil y los Mossos d'Esquadra están desplegados en las arterias comerciales de la capital y en la Gran Vía de Barcelona, con el objetivo de prevenir saqueos y actos de vandalismo. En Madrid, la policía ha reforzado la “milla de oro” con blindaje de escaparates de marcas de lujo, mientras que en Barcelona los Mossos han activado una alerta de nivel cuatro. Los trabajadores transfronterizos que cruzan la frontera con Francia se enfrentan a controles adicionales y a la posibilidad de retrasos de 15 a 30 minutos en el aeropuerto trinacional de Basilea/Mulhouse-Freiburg. Según la fuente oficial, los controles se mantendrán hasta el 31 de octubre, fecha de finalización de la cumbre del G7 en Évian-les-Bains. 
+Pasamos a Mundo.
+Los estadounidenses votan este martes en unas elecciones de medio mandato que decidirán el control de la Cámara de Representantes y un tercio del Senado. Las encuestas sitúan a los demócratas con ventaja, lo que supondría una derrota significativa para la administración de Donald Trump y una posible reorientación de la política exterior, incluida la postura frente a Irán. (Swissinfo)【1†L7-L14】. 
+En Francia, los sindicatos estudiantiles convocan una nueva jornada de bloqueos en institutos y universidades para presionar al Gobierno sobre la crisis del coste de la vida y la financiación de los servicios públicos. La movilización se produce en medio de una ligera disminución de la tensión en las aulas tras la jornada anterior. (Swissinfo)【1†L19-L26】. 
+En Ucrania, un ataque ruso a una escuela en la región de Zaporiyia deja al menos 26 muertos y numerosos desaparecidos, complicando los esfuerzos humanitarios y las negociaciones técnicas que EE. UU. mediará en Abu Dabi la próxima semana. (Swissinfo)【1†L30-L38】. 
+Polonia vive una crisis institucional: el Tribunal Constitucional se reúne en medio de una disputa entre el Gobierno liberal de Donald Tusk y el presidente Karol Nawrocki, afín a la ultraderecha, por la legitimidad de varios magistrados. La contienda se ha convertido en una batalla abierta por el control del órgano judicial. (Swissinfo)【1†L43-L50】.
 
-Pasamos a Barcelona. 
-En la capital catalana, la policía ha instalado un dispositivo de nivel cuatro en la zona de la Plaza de Catalunya, tras la convocatoria de Blocus. Los Mossos han reforzado la presencia en la zona de la Gran Vía y en la zona de la Sagrada Familia, con la intención de impedir la dispersión de manifestantes. Se han registrado 40 actas de infracción y 200 identificados, la mayoría jóvenes, y se han encontrado armas y líquidos corrosivos en varias personas. El presidente de la Generalitat, Salvador Illa, ha advertido que los que intenten saquear serán procesados. 
+Pasamos a España.
+En la capital, la Policía Nacional desaloja la acampada de Sol después de 38 días de protestas por la crisis de la vivienda, sin incidentes violentos, según la Delegación del Gobierno. (Antena 3)【3†L14-L18】. 
+En Urda, Toledo, se cumplen seis días del accidente ferroviario que dejó decenas de muertos. El alcalde de Valladolid, Óscar Puente, comparece ante el Congreso para explicar el siniestro y el nuevo escudo de ayudas de 30 millones de euros aprobado por el Gobierno para las víctimas. (Antena 3)【3†L20-L23】. 
+El Gobierno aprueba el real decreto MIR, que reducirá a 17 horas las guardias de los residentes y aumentará sus retribuciones a partir de 2027, una medida que busca mejorar la retención de médicos. (El Mundo)【4†L6-L13】. 
+En el mercado bursátil, el IBEX 35 cede un 0,85 % a 18 796,6 puntos, con la banca a la baja y Repsol subiendo un 2,7 % tras el repunte del crudo. Grifols gana un 2,1 % tras superar sus previsiones de ingresos y EBITDA. (Benzinga)【13†L37-L45】【13†L70-L77】. 
+En el sector tecnológico, Apple reporta su mejor trimestre de septiembre, con ingresos de 114,5 mil millones de dólares, un 11,7 % más que el año anterior, aunque advierte una ligera caída del margen bruto por el encarecimiento de los chips de memoria. (Benzinga)【13†L96-L104】.
 
-Pasamos a Bilbao y Bizkaia. 
-En Bilbao, la policía ha desplegado unidades de contención en la zona de la Plaza de la Constitución y en la zona de la Universidad del País Vasco. Se han detenido a varios jóvenes vinculados a la red Blocus y se han registrado 9 arrestados en la zona de la zona de la Universidad del País Vasco. Los trabajadores transfronterizos que cruzan la frontera con Francia se enfrentan a controles adicionales y a la posibilidad de retrasos de 15 a 30 minutos en el aeropuerto trinacional de Basilea/Mulhouse-Freiburg. 
+Pasamos a Barcelona.
+La Subcomisión de Urbanismo del Ayuntamiento aprueba una modificación del Plan General Metropolitano que permite prohibir o limitar los alquileres de temporada en los barrios donde el parque de viviendas habituales sea insuficiente. La iniciativa, impulsada por la consellera Sílvia Paneque, busca frenar la gentrificación y proteger el derecho a una vivienda permanente. (El Diario)【23†L14-L22】.
 
-Pasamos a Ginebra y alrededores. 
-El aeropuerto de Ginebra evacuó a 2.500 personas a las 4:40 de la mañana tras una fuerte olor a solvente, provocada por trabajos nocturnos de revestimiento de suelo. El servicio de rescate y de lucha contra incendios de aeronaves (SSLIA) y los bomberos del SIS llevaron a cabo la evacuación, que se completó a las 5:30. El primer vuelo salió a las 6:30 con un retraso de 20 minutos. No se detectó ningún riesgo y el riesgo se descartó tras la inspección de la calidad del aire. 
+Pasamos a Bilbao y Bizkaia.
+El túnel de Artxanda, la vía más larga del conjunto de túneles que conecta La Salve con Txorierri, se cerró ayer a las 20:00 para iniciar obras de renovación que se prolongarán hasta abril de 2027. Con una capacidad diaria de 16 000 vehículos, su cierre genera desvíos y congestión, sobre todo en la zona de Deusto y en los accesos al aeropuerto de Loiu. (El Correo)【25†L17-L23】【25†L31-L38】.
 
-En cuanto a la frontera franco-suiza, los controles temporales se mantienen hasta el 31 de octubre, como parte de la operación de seguridad del G7. Los trabajadores transfronterizos deben presentar pasaportes o documentos de identidad y pueden experimentar retrasos de 15 a 30 minutos en la autopista A40 cerca de Ginebra. 
+Pasamos a Ginebra y alrededores.
+Francia reintroduce los controles fronterizos con Suiza a partir del 1 de noviembre, citando amenazas jihadistas y aumento de la violencia antisémita. Los 180 000 trabajadores transfronterizos podrían enfrentar esperas más largas y una pérdida estimada de 50 000 CHF por minuto de retraso en la hora punta. (Visahq)【19†L13-L24】. 
+Los Transportes Públicos Genevois (TPG) anuncian, a partir del 14 de diciembre, una ampliación de la oferta nocturna y la extensión de varias líneas de tranvía y bus, incluida la línea 8 entre Cornavin y Veyrier los domingos de mayo a septiembre, y la prolongación de la línea 38 los fines de semana. Estas mejoras buscan facilitar el acceso a zonas de ocio y al nuevo barrio de Grands‑Esserts. (TPG)【15†L11-L19】【15†L31-L40】. 
+El Centro de Vigilancia Meteorológica de Ginebra indica “vigilancia verde”: no hay alertas activas de intempéries para el día de hoy. (Meteocentrale)【21†L6-L9】. 
+En el CERN, el experimento LHCb presenta evidencia de una desintegración de partícula beauty‑down con una probabilidad de uno entre diez mil millones, el hallazgo más raro jamás observado y que abre una nueva ventana para buscar física más allá del Modelo Estándar. (CERN)【28†L4-L10】【28†L14-L20】.
 
-En cuanto a la movilidad pública, el servicio de transporte público de Ginebra (TPG) no ha reportado cierres de líneas ni obras importantes. La red de ciclovías y el servicio de trenes de la estación Cornavin están operando normalmente. No se han emitido alertas meteorológicas activas en el cantón de Ginebra. 
+Mercados.
+En Wall Street, los futuros del S&P 500 se mantienen sin cambios, mientras el Nasdaq 100 muestra una ligera recuperación tras una corrección técnica. El Dow Jones sube un 0,41 % y el S&P 500 baja un 0,51 % en la última sesión. (Bloomberg)【12†L17-L21】. 
+En Europa, el IBEX 35 cotiza a 18 796,6 puntos, con una caída del 0,85 % a las 12:42 (hora de Madrid). El DAX alemán baja un 0,63 % a 25 817,75 puntos y el CAC 40 francés pierde un 0,32 % a 8 021,85 puntos. (Benzinga)【13†L45-L51】. 
+El Brent supera los 106 dólares por barril (+1,76 %) y el WTI los 98 dólares (+1,66 %) a las 7:44 GMT, impulsados por los ataques limitados de EE. UU. contra la isla iraní de Qeshm. (Diario Neuquino)【9†L24-L30】. 
+El euro se cotiza a 1,118 dólares, con una ligera caída del 0,1 %, mientras el bono estadounidense a diez años sube 2,8 pb a 4,937 %. El oro retrocede un 1 % a 3 904 dólares la onza. (Bloomberg)【12†L31-L36】. 
+En divisas, el EUR/CHF se mantiene alrededor de 1,025, sin variaciones significativas. 
 
-Pasamos a Mercados. 
-El mercado estadounidense cerró en caída el viernes 30 de octubre, con el S&P 500 a 7 580,07, una caída de 1,8 %. El Nasdaq Composite cerró en 25 437, una caída de 2,9 %, y el Dow Jones Industrial Average cerró en 51 770,31, una caída de 1,1 %. Los precios de las acciones de Intel y Amazon se desplomaron, lo que ha aumentado la preocupación por el gasto en IA. 
-
-El Euro Stoxx 50 cerró en 6 131,31, una caída de 1,2 %. El IBEX 35 cerró en 18 652,90, una caída de 1,1 %. El CAC 40 cerró en 7 969,42, una caída de 0,01 %. El SMI suizo cerró en 14 810,66, una subida de 0,36 %. 
-
-El euro frente al dólar subió a 1,1167, un incremento de 0,08 %. El euro frente al franco suizo subió a 0,9211, un incremento de 0,02 %. 
-
-En el sector tecnológico, OpenAI ha reducido su objetivo de financiación a 20 mil millones de dólares, según un informe de Reuters. Nvidia está considerando respaldar deuda para un nuevo centro de datos de IA de Anthropic, con un contrato de 44,6 mil millones de dólares. OpenAI también ha reforzado las salvaguardas de violencia en ChatGPT, limitando la información sobre armas y sistemas de seguridad para usuarios menores de edad. 
-
-En el sector de criptomonedas, Binance sufrió el mayor robo de su historia, con 6,3 millonios de dólares sustraídos en 20 minutos. Los atacantes han aprovechado la infraestructura de firma de Binance para mover fondos a direcciones fuera del alcance de la plataforma. Se han congelado aproximadamente la mitad de los activos robados por los emisores de stablecoins. 
-
-En el sector industrial, la actividad manufacturera en China se contrajo por tercera vez en cuatro meses, con el PMI de manufactura en 49,3. La demanda interna sigue siendo débil y las exportaciones se han visto afectadas por la caída de las órdenes de Navidad. 
-
-En el ámbito militar, el Departamento de Estado de EE. UU. aprobó la venta de 500 misiles Patriot PAC‑3 a Ucrania por un valor estimado de 2,1 mil millones de dólares, en una de las mayores entregas de defensa a Kiev desde el inicio de la segunda administración de Trump. 
-
-Cierre breve. 
-En resumen, el día de hoy se ha visto marcado por disturbios en España, una evacuación aeroportuaria en Ginebra, controles fronterizos en Francia y Suiza, un robo masivo en Binance, caídas en los mercados estadounidenses y europeos, y movimientos significativos en el sector tecnológico y militar. Manténganse informados y sigan las indicaciones de las autoridades locales.
+Cierre.
+Esto ha sido todo por hoy. Manténganse informados y nos escuchamos mañana con el próximo briefing. Gracias por su atención.
 
 FUENTES:
-Mundo | Blocus, hoy en directo: última hora de las protestas y disturbios convocados en España el sábado 31 de octubre | El Confidencial | https://www.elconfidencial.com/espana/2026-10-31/blocus-disturbios-31-octubre-madrid-barcelona-directo_4456323/
-Ginebra | Ginebra: evacuación de 2500 personas a la hora de una fuerte olor de solvente | 20min.ch | https://www.20min.ch/fr/story/aeroport-de-geneve-une-forte-odeur-de-dissolvant-pres-de-2500-personnes-evacues-103659233/
-Ginebra | El plan de seguridad del G7 en Francia provoca controles fronterizos temporales con Suiza | Visahq | https://www.visahq.news/es/2026-10-21/ch/frances-g7-security-plan-triggers-temporary-border-checks-with-switzerland/
-Tecnología | Explainer-Gone in 20 minutes: How the biggest heist in crypto history unfolded | Reuters | https://www.investing.com/news/stock-market-news/explainergone-in-20-minutes-how-the-biggest-heist-in-crypto-history-unfolded-4986851/
-Tecnología | China’s factory activity shrinks in October, third contraction in four months | Reuters | https://www.investing.com/news/economy-news/chinas-october-factory-activity-contracts-at-fastest-pace-in-3-months-pmi-survey-shows-4989032/
-Tecnología | OpenAI reportedly trims fundraising target to $20 billion | Reuters | https://malpass.co/top-ai-stories-2026-10-31/
-Tecnología | Nvidia considers backing debt for an Anthropic-linked data center | Reuters | https://malpass.co/top-ai-stories-2026-10-31/
-Tecnología | OpenAI tightens ChatGPT’s violence-prevention safeguards for teens | Reuters | https://malpass.co/top-ai-stories-2026-10-31/
-Mercados | Wall Street closes sharply lower as AI cash burn fears spark tech selloff | Moneycontrol | https://www.moneycontrol.com/news/business/markets/wall-street-closes-sharply-lower-as-ai-cash-burn-fears-spark-tech-selloff-14064895.html/
-Mercados | Euro Stoxx 50 closes at 6,131.31 | Yahoo Finance | https://finance.yahoo.com/quote/%5ESTOXX50E/history?period1=1730000000&period2=1730000000/
-Mercados | IBEX 35 closes at 18,652.90 | Yahoo Finance | https://finance.yahoo.com/quote/%5EIBEX/
-Mercados | CAC 40 closes at 7,969.42 | https://exa.ai/library/markets/index/CAC40?date=2026-10-30&view=daily/
-Mercados | SMI closes at 14,810.66 | https://www.ad-hoc-news.de/boerse/news/marktberichte/smi-closes-0-36-percent-higher-at-14-810-66-points/70436749/
-Mercados | EUR/USD quote 1.116675 | https://exa.ai/library/markets/forex/EURUSD/
-Mercados | EUR/CHF quote 0.921058 | https://exa.ai/library/markets/forex/EURCHF/
-Militar | US approves $2.1 billion Patriot missile sale to Ukraine | Reuters | https://www.investing.com/news/stock-market-news/us-approves-21-billion-patriot-missile-sale-to-ukraine-4988538/
+Mundo | EE. UU. votan en elecciones de medio mandato | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
+Mundo | Protestas estudiantiles en Francia | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
+Mundo | Ataque ruso a escuela en Zaporiyia, Ucrania | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
+Mundo | Crisis del Tribunal Constitucional en Polonia | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
+España | Desalojo de la acampada de Sol en Madrid | Antena 3 | https://www.antena3.com/noticias/sociedad/noticias-hoy-martes-3-noviembre-2026_202611036ae990f96973466c29e7400b.html
+España | Accidente ferroviario en Urda, Toledo | Antena 3 | https://www.antena3.com/noticias/sociedad/noticias-hoy-martes-3-noviembre-2026_202611036ae990f96973466c29e7400b.html
+España | Real decreto MIR: guardias de residentes y retribuciones | El Mundo | https://www.elmundo.es/elmundo/hemeroteca/2026/11/03/noticias.html
+España | IBEX 35 cae 0,85 % a 18 796,6 puntos | Benzinga | https://es.benzinga.com/news/spain/indices/ibex-35-cae-tension-iran-elecciones-eeuu-031126/
+España | Apple supera previsiones de ingresos en septiembre | Benzinga | https://es.benzinga.com/news/spain/indices/ibex-35-cae-tension-iran-elecciones-eeuu-031126/
+Tecnología | Alemania pide flexibilizar el AI Act | Reuters – MarketScreener | https://es.marketscreener.com/noticias/el-ministro-de-digitalizaci-n-aboga-por-flexibilizar-la-regulaci-n-de-la-uni-n-europea-sobre-intelig-ce785fd8df8cf227
+Barcelona | Modificación del PGM para limitar alquileres de temporada | Europa Press – elDiario.es | https://www.eldiario.es/catalunya/barcelona-aprueba-modificacion-urbanistica-permitiria-prohibir-alquiler-temporada-barrios_1_13633390.html
+Bilbao | Cierre del túnel de Artxanda y desvíos de tráfico | El Correo | https://www.elcorreo.com/bizkaia/primer-dia-cierre-principal-artxanda-directo-20261103071751-di.html
+Ginebra | Francia restablece controles fronterizos con Suiza | Visahq | https://www.visahq.news/fr/2026-10-11/ch/france-to-reinstate-border-checks-with-switzerland-from-1-november-2026/
+Ginebra | Ampliación de la oferta nocturna de los TPG | TPG | https://www.tpg.ch/en/node/8808
+Ginebra | Vigilancia meteorológica: alerta verde, sin incidencias | Meteocentrale | http://alarm.meteocentrale.ch/geneve-index-fr.html
+CERN | LHCb evidencia decaimiento de partícula “beauty” 1‑en‑10 mil millones | CERN | https://home.cern/lhcb-finds-evidence-of-one-in-ten-billion-particle-decay/
+Mercados | Wall Street: S&P 500, Nasdaq, Dow en sesión | Bloomberg | https://www.bloomberg.com/news/articles/2026-11-02/stock-market-today-dow-s-p-live-updates
+Mercados | Precios del crudo Brent y WTI al alza | Reuters – Diario Neuquino | https://diarioneuquino.com.ar/el-petroleo-vuelve-a-subir-este-martes-3-de-noviembre-el-brent-supera-los-us106-y-el-wti-alcanza-los-us98/
+Mercados | Euro, bonos y oro en la jornada | Bloomberg | https://www.bloomberg.com/news/articles/2026-11-02/stock-market-today-dow-s-p-live-updates
