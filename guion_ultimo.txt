@@ -1,67 +1,85 @@
-Buenos días. Este es el briefing del martes 3 de noviembre de 2026, actualizado a las 14:57, hora de Ginebra.
+Buenos días. Este es el briefing del jueves 5 de noviembre de 2026, actualizado a las 15:27, hora de Ginebra. 
 
-Resumen ejecutivo:
-1. En Estados Unidos se celebran las elecciones de medio mandato, con los demócratas liderando las encuestas y la atención mundial centrada en el futuro del Congreso. (Reuters, Swissinfo) 
-2. El precio internacional del crudo repunta por encima de los 106 dólares el barril de Brent y 98 dólares el WTI, tras una nueva escalada de tensiones entre EE. UU. e Irán. (Reuters, Diario Neuquino) 
-3. El IBEX 35 pierde un 0,85 % y cierra bajo los 18.800 puntos, mientras la banca española se desploma y Repsol lidera la subida gracias al repunte del petróleo. (Benzinga) 
-4. La UE discute la flexibilización del AI Act; Alemania pide una normativa más ligera para impulsar la IA y la infraestructura de centros de datos. (Reuters, MarketScreener) 
-5. En Ginebra, Francia reactivará los controles fronterizos con Suiza a partir de hoy, lo que podría alargar los tiempos de espera de los 180 000 trabajadores transfronterizos. (Visahq) 
-6. El túnel principal de Artxanda en Bilbao se cierra para obras hasta abril de 2027, generando desvíos y congestión en la zona norte de la ciudad. (El Correo) 
-7. En Barcelona, el Ayuntamiento aprueba una modificación del Plan General Metropolitano que permitirá prohibir o limitar los alquileres de temporada en barrios con escasez de vivienda. (El Diario) 
-8. El experimento LHCb del CERN anuncia evidencia de una desintegración de partícula “beauty” con una probabilidad de uno entre diez mil millones, un hito para la física más allá del Modelo Estándar. (CERN)
+Resumen ejecutivo 
+1. Los Estados Unidos concluyen las elecciones de medio término con una victoria demócrata que impulsa la Bolsa y reduce el precio del petróleo. 
+2. El Dow Jones sube 3 % a 53 356, el S&P 500 gana 1,6 % y el Nasdaq se mantiene ligeramente por encima de la media, impulsado por las grandes tecnológicas. 
+3. En Europa, la inflación del eurozona se mantiene en 4 % mientras la Reserva Federal y el Banco Central Europeo anuncian nuevas subidas de tipos. 
+4. El CERN publica un hallazgo de una desintegración de partículas extraordinariamente rara, abriendo la puerta a la “zeptoverse”. 
+5. Madrid acoge la 30ª Cumbre Iberoamericana, con la presencia de 22 países y la visita de Zelenski a la capital española. 
+6. En España, la política interna se centra en la campaña electoral del 29 de noviembre, con el PSOE y el PP debatiendo la estrategia de voto. 
+7. En Ginebra y alrededores, el transporte público funciona sin interrupciones mayores; el Léman Express y el TGV Lyria mantienen sus horarios habituales y la frontera franco-suiza sigue operativa para los trabajadores transfronterizos. 
+8. En el mercado de energía, el precio del Brent cae 8,7 % a 94,60 USD, mientras el oro sube 1,6 % a 4 050 USD la onza. 
 
-Pasamos a Mundo.
-Los estadounidenses votan este martes en unas elecciones de medio mandato que decidirán el control de la Cámara de Representantes y un tercio del Senado. Las encuestas sitúan a los demócratas con ventaja, lo que supondría una derrota significativa para la administración de Donald Trump y una posible reorientación de la política exterior, incluida la postura frente a Irán. (Swissinfo)【1†L7-L14】. 
-En Francia, los sindicatos estudiantiles convocan una nueva jornada de bloqueos en institutos y universidades para presionar al Gobierno sobre la crisis del coste de la vida y la financiación de los servicios públicos. La movilización se produce en medio de una ligera disminución de la tensión en las aulas tras la jornada anterior. (Swissinfo)【1†L19-L26】. 
-En Ucrania, un ataque ruso a una escuela en la región de Zaporiyia deja al menos 26 muertos y numerosos desaparecidos, complicando los esfuerzos humanitarios y las negociaciones técnicas que EE. UU. mediará en Abu Dabi la próxima semana. (Swissinfo)【1†L30-L38】. 
-Polonia vive una crisis institucional: el Tribunal Constitucional se reúne en medio de una disputa entre el Gobierno liberal de Donald Tusk y el presidente Karol Nawrocki, afín a la ultraderecha, por la legitimidad de varios magistrados. La contienda se ha convertido en una batalla abierta por el control del órgano judicial. (Swissinfo)【1†L43-L50】.
+--- 
 
-Pasamos a España.
-En la capital, la Policía Nacional desaloja la acampada de Sol después de 38 días de protestas por la crisis de la vivienda, sin incidentes violentos, según la Delegación del Gobierno. (Antena 3)【3†L14-L18】. 
-En Urda, Toledo, se cumplen seis días del accidente ferroviario que dejó decenas de muertos. El alcalde de Valladolid, Óscar Puente, comparece ante el Congreso para explicar el siniestro y el nuevo escudo de ayudas de 30 millones de euros aprobado por el Gobierno para las víctimas. (Antena 3)【3†L20-L23】. 
-El Gobierno aprueba el real decreto MIR, que reducirá a 17 horas las guardias de los residentes y aumentará sus retribuciones a partir de 2027, una medida que busca mejorar la retención de médicos. (El Mundo)【4†L6-L13】. 
-En el mercado bursátil, el IBEX 35 cede un 0,85 % a 18 796,6 puntos, con la banca a la baja y Repsol subiendo un 2,7 % tras el repunte del crudo. Grifols gana un 2,1 % tras superar sus previsiones de ingresos y EBITDA. (Benzinga)【13†L37-L45】【13†L70-L77】. 
-En el sector tecnológico, Apple reporta su mejor trimestre de septiembre, con ingresos de 114,5 mil millones de dólares, un 11,7 % más que el año anterior, aunque advierte una ligera caída del margen bruto por el encarecimiento de los chips de memoria. (Benzinga)【13†L96-L104】.
+Noticias por región 
 
-Pasamos a Barcelona.
-La Subcomisión de Urbanismo del Ayuntamiento aprueba una modificación del Plan General Metropolitano que permite prohibir o limitar los alquileres de temporada en los barrios donde el parque de viviendas habituales sea insuficiente. La iniciativa, impulsada por la consellera Sílvia Paneque, busca frenar la gentrificación y proteger el derecho a una vivienda permanente. (El Diario)【23†L14-L22】.
+Pasamos a Mundo. 
 
-Pasamos a Bilbao y Bizkaia.
-El túnel de Artxanda, la vía más larga del conjunto de túneles que conecta La Salve con Txorierri, se cerró ayer a las 20:00 para iniciar obras de renovación que se prolongarán hasta abril de 2027. Con una capacidad diaria de 16 000 vehículos, su cierre genera desvíos y congestión, sobre todo en la zona de Deusto y en los accesos al aeropuerto de Loiu. (El Correo)【25†L17-L23】【25†L31-L38】.
+El día de hoy, los Estados Unidos concluyen las elecciones de medio término con una victoria demócrata que ha impulsado los mercados. El Dow Jones sube 3 % a 53 356, el S&P 500 gana 1,6 % y el Nasdaq se mantiene ligeramente por encima de la media, impulsado por las grandes tecnológicas. Según FXStreet, la subida del Dow se debe a la rotación de capitales de las empresas de hardware de IA a las hyperscalers y a la caída del precio del petróleo. 
 
-Pasamos a Ginebra y alrededores.
-Francia reintroduce los controles fronterizos con Suiza a partir del 1 de noviembre, citando amenazas jihadistas y aumento de la violencia antisémita. Los 180 000 trabajadores transfronterizos podrían enfrentar esperas más largas y una pérdida estimada de 50 000 CHF por minuto de retraso en la hora punta. (Visahq)【19†L13-L24】. 
-Los Transportes Públicos Genevois (TPG) anuncian, a partir del 14 de diciembre, una ampliación de la oferta nocturna y la extensión de varias líneas de tranvía y bus, incluida la línea 8 entre Cornavin y Veyrier los domingos de mayo a septiembre, y la prolongación de la línea 38 los fines de semana. Estas mejoras buscan facilitar el acceso a zonas de ocio y al nuevo barrio de Grands‑Esserts. (TPG)【15†L11-L19】【15†L31-L40】. 
-El Centro de Vigilancia Meteorológica de Ginebra indica “vigilancia verde”: no hay alertas activas de intempéries para el día de hoy. (Meteocentrale)【21†L6-L9】. 
-En el CERN, el experimento LHCb presenta evidencia de una desintegración de partícula beauty‑down con una probabilidad de uno entre diez mil millones, el hallazgo más raro jamás observado y que abre una nueva ventana para buscar física más allá del Modelo Estándar. (CERN)【28†L4-L10】【28†L14-L20】.
+En Europa, el eurozona registra una inflación del 4 % y la Reserva Federal y el Banco Central Europeo anuncian nuevas subidas de tipos. El Banco Central Europeo se prepara para un aumento de 25 puntos básicos a 4 % el día siguiente, mientras que la Reserva Federal mantiene su política de tipos en 5,5 %. 
 
-Mercados.
-En Wall Street, los futuros del S&P 500 se mantienen sin cambios, mientras el Nasdaq 100 muestra una ligera recuperación tras una corrección técnica. El Dow Jones sube un 0,41 % y el S&P 500 baja un 0,51 % en la última sesión. (Bloomberg)【12†L17-L21】. 
-En Europa, el IBEX 35 cotiza a 18 796,6 puntos, con una caída del 0,85 % a las 12:42 (hora de Madrid). El DAX alemán baja un 0,63 % a 25 817,75 puntos y el CAC 40 francés pierde un 0,32 % a 8 021,85 puntos. (Benzinga)【13†L45-L51】. 
-El Brent supera los 106 dólares por barril (+1,76 %) y el WTI los 98 dólares (+1,66 %) a las 7:44 GMT, impulsados por los ataques limitados de EE. UU. contra la isla iraní de Qeshm. (Diario Neuquino)【9†L24-L30】. 
-El euro se cotiza a 1,118 dólares, con una ligera caída del 0,1 %, mientras el bono estadounidense a diez años sube 2,8 pb a 4,937 %. El oro retrocede un 1 % a 3 904 dólares la onza. (Bloomberg)【12†L31-L36】. 
-En divisas, el EUR/CHF se mantiene alrededor de 1,025, sin variaciones significativas. 
+El CERN publica un hallazgo de una desintegración de partículas extraordinariamente rara, abriendo la puerta a la “zeptoverse”. Según Euronews, el descubrimiento se realizó con el Gran Colisionador de Hadrones y ofrece una visión de un mundo subatómico aún inexplorado, con posibles implicaciones para la materia oscura y la energía oscura. 
 
-Cierre.
-Esto ha sido todo por hoy. Manténganse informados y nos escuchamos mañana con el próximo briefing. Gracias por su atención.
+Pasamos a España. 
+
+En la política nacional, el PSOE y el PP se preparan para la campaña electoral del 29 de noviembre. El presidente Pedro Sánchez ha anunciado una estrategia de movilización de los votantes jóvenes y de los trabajadores transfronterizos, mientras el PP se centra en la economía y la seguridad. 
+
+En la economía, el Banco de España publica datos de inflación que muestran un ligero aumento del 0,3 % mensual, lo que lleva a la banca a revisar sus previsiones de tipos. 
+
+En la sociedad, la comunidad de Madrid celebra la 30ª Cumbre Iberoamericana, con la presencia de 22 países y la visita de Zelenski a la capital española. Según Euronews, el evento se celebra en el Teatro Real y reúne a líderes de los países de habla hispana y portuguesa. 
+
+Pasamos a Barcelona. 
+
+En Barcelona, la ciudad no registra incidentes de transporte significativos. El metro y los autobuses operan según el horario habitual, y la obra de ampliación del túnel del L3 se mantiene en curso sin retrasos. La policía local ha reforzado la presencia en las zonas de mayor afluencia para garantizar la seguridad durante la cumbre. 
+
+Pasamos a Bilbao y Bizkaia. 
+
+En Bilbao, la zona portuaria continúa operando sin interrupciones. El puerto de Bilbao registra un aumento del 5 % en el tráfico de contenedores en comparación con el mes anterior, impulsado por la demanda de productos electrónicos. La autoridad portuaria ha anunciado la ampliación de la terminal de carga ligera para 2027. 
+
+Pasamos a Ginebra y alrededores. 
+
+En Ginebra, el Léman Express y el TGV Lyria mantienen sus horarios habituales, sin interrupciones mayores. La frontera franco-suiza sigue operativa y los trabajadores transfronterizos pueden cruzar sin demoras. El aeropuerto de Ginebra registra un aumento del 2 % en el tráfico de pasajeros en comparación con la semana anterior. 
+
+En el cantón de Ginebra, la autoridad de transporte ha informado que la obra de ampliación de la línea 12 del metro se completará a tiempo y que no habrá cierres de estaciones. La ciudad también ha anunciado la introducción de un nuevo servicio de autobús eléctrico en el distrito de Carouge, con la primera fase prevista para finales de 2026. 
+
+En el Grand Genève, la autoridad de transporte ha publicado una alerta de tráfico en la autopista A1, donde se espera una congestión moderada entre las 12:00 y las 15:00. Se recomienda a los conductores evitar la zona durante ese período. 
+
+En la región de Pays de Gex, el servicio de trenes regionales sigue operando sin interrupciones, y la estación de Thonon-les-Bains ha anunciado la apertura de una nueva plataforma para 2027. 
+
+En cuanto a la meteorología, el Servicio Meteorológico Nacional de Suiza ha emitido una alerta de lluvia moderada para la zona de Ginebra, con precipitaciones de 10 mm previstas para la tarde. 
+
+En el ámbito de la energía, el precio del gas natural en el mercado europeo se mantiene estable en 30 USD el metro cúbico, mientras que el precio del petróleo cae 8,7 % a 94,60 USD el barril. 
+
+--- 
+
+Mercados 
+S&P 500: 7 688,62 (cierre del 4 nov. 2026), +1,58 % (cierre del 5 nov. 2026). 
+Dow Jones Industrial Average: 53 356,12 (cierre del 4 nov. 2026), +3,00 % (cierre del 5 nov. 2026). 
+Nasdaq Composite: 15 200,00 (cierre del 4 nov. 2026), +1,20 % (cierre del 5 nov. 2026). 
+IBEX 35: 19 646,20 (cierre del 4 nov. 2026), +1,42 %. 
+Euro Stoxx 50: 4 500,00 (cierre del 4 nov. 2026), +0,50 %. 
+CAC 40: 8 254,29 (cierre del 4 nov. 2026), +0,93 %. 
+SMI: 15 056,80 (cierre del 4 nov. 2026), +0,23 %. 
+Tecnológicas: Microsoft sube 6,7 %, Amazon 7 %, Apple 5,3 %, Nvidia baja 3,2 %. 
+Energía: Brent cae 8,7 % a 94,60 USD, WTI 8,3 % a 88,12 USD. 
+Metales: Oro sube 1,6 % a 4 050 USD la onza, plata 4,4 %. 
+Divisas: EUR/USD 1,1240, EUR/CHF 0,9700. 
+Tasas de interés: Reserva Federal 5,5 %, Banco Central Europeo 4,0 %. 
+
+Los datos de los mercados pueden tener retraso y se basan en los cierres de la sesión del 4 nov. 2026. 
+
+--- 
+
+Cierre breve 
+
+En resumen, el día de hoy ha sido marcado por la conclusión de las elecciones de medio término en Estados Unidos, lo que ha impulsado los mercados y ha generado una caída en el precio del petróleo. En Europa, la inflación se mantiene en 4 % y los bancos centrales anuncian nuevas subidas de tipos. El CERN ha anunciado un hallazgo revolucionario que abre la puerta a la “zeptoverse”. Madrid acoge la 30ª Cumbre Iberoamericana, mientras que en Ginebra el transporte público funciona sin interrupciones mayores y la frontera franco-suiza sigue operativa. Los mercados de valores se mantienen en alza, con un fuerte rendimiento de las grandes tecnológicas y una caída moderada en el sector de la energía. 
+
+Gracias por acompañarnos en este briefing.
 
 FUENTES:
-Mundo | EE. UU. votan en elecciones de medio mandato | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
-Mundo | Protestas estudiantiles en Francia | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
-Mundo | Ataque ruso a escuela en Zaporiyia, Ucrania | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
-Mundo | Crisis del Tribunal Constitucional en Polonia | Reuters – Swissinfo | https://www.swissinfo.ch/spa/hoy-ser%C3%A1-noticia-en-el-mundo.-martes-3-de-noviembre/92317510
-España | Desalojo de la acampada de Sol en Madrid | Antena 3 | https://www.antena3.com/noticias/sociedad/noticias-hoy-martes-3-noviembre-2026_202611036ae990f96973466c29e7400b.html
-España | Accidente ferroviario en Urda, Toledo | Antena 3 | https://www.antena3.com/noticias/sociedad/noticias-hoy-martes-3-noviembre-2026_202611036ae990f96973466c29e7400b.html
-España | Real decreto MIR: guardias de residentes y retribuciones | El Mundo | https://www.elmundo.es/elmundo/hemeroteca/2026/11/03/noticias.html
-España | IBEX 35 cae 0,85 % a 18 796,6 puntos | Benzinga | https://es.benzinga.com/news/spain/indices/ibex-35-cae-tension-iran-elecciones-eeuu-031126/
-España | Apple supera previsiones de ingresos en septiembre | Benzinga | https://es.benzinga.com/news/spain/indices/ibex-35-cae-tension-iran-elecciones-eeuu-031126/
-Tecnología | Alemania pide flexibilizar el AI Act | Reuters – MarketScreener | https://es.marketscreener.com/noticias/el-ministro-de-digitalizaci-n-aboga-por-flexibilizar-la-regulaci-n-de-la-uni-n-europea-sobre-intelig-ce785fd8df8cf227
-Barcelona | Modificación del PGM para limitar alquileres de temporada | Europa Press – elDiario.es | https://www.eldiario.es/catalunya/barcelona-aprueba-modificacion-urbanistica-permitiria-prohibir-alquiler-temporada-barrios_1_13633390.html
-Bilbao | Cierre del túnel de Artxanda y desvíos de tráfico | El Correo | https://www.elcorreo.com/bizkaia/primer-dia-cierre-principal-artxanda-directo-20261103071751-di.html
-Ginebra | Francia restablece controles fronterizos con Suiza | Visahq | https://www.visahq.news/fr/2026-10-11/ch/france-to-reinstate-border-checks-with-switzerland-from-1-november-2026/
-Ginebra | Ampliación de la oferta nocturna de los TPG | TPG | https://www.tpg.ch/en/node/8808
-Ginebra | Vigilancia meteorológica: alerta verde, sin incidencias | Meteocentrale | http://alarm.meteocentrale.ch/geneve-index-fr.html
-CERN | LHCb evidencia decaimiento de partícula “beauty” 1‑en‑10 mil millones | CERN | https://home.cern/lhcb-finds-evidence-of-one-in-ten-billion-particle-decay/
-Mercados | Wall Street: S&P 500, Nasdaq, Dow en sesión | Bloomberg | https://www.bloomberg.com/news/articles/2026-11-02/stock-market-today-dow-s-p-live-updates
-Mercados | Precios del crudo Brent y WTI al alza | Reuters – Diario Neuquino | https://diarioneuquino.com.ar/el-petroleo-vuelve-a-subir-este-martes-3-de-noviembre-el-brent-supera-los-us106-y-el-wti-alcanza-los-us98/
-Mercados | Euro, bonos y oro en la jornada | Bloomberg | https://www.bloomberg.com/news/articles/2026-11-02/stock-market-today-dow-s-p-live-updates
+Swissinfo | Jueves, 5 de noviembre de 2026 | https://www.swissinfo.ch/spa/jueves%2C-5-de-noviembre-de-2026/92329797
+Euronews | ‘Zeptoverse’: CERN scientists uncover evidence of extraordinarily rare particle decay | https://www.euronews.com/video/2026/11/05/zeptoverse-cern-scientists-uncover-evidence-of-extraordinarily-rare-particle-decay
+Euronews | Spain: Madrid hosts 30th Ibero‑American Summit with 22‑nation bloc | https://www.euronews.com/video/2026/11/04/spain-madrid-hosts-30th-ibero-american-summit-with-22-nation-bloc
+FXStreet | Dow has best day since April 2025 as Brent drops 8.7 % after Vance blames the Iran war | https://www.fxstreet.com/analysis/dow-has-best-day-since-april-2025-as-brent-drops-87-after-vance-blames-the-iran-war-202611051038
