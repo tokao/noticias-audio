@@ -1,85 +1,63 @@
-Buenos días. Este es el briefing del jueves 5 de noviembre de 2026, actualizado a las 15:27, hora de Ginebra. 
+Buenos días. Este es el briefing del viernes 6 de noviembre de 2026, actualizado a las 15:04, hora de Ginebra.
 
-Resumen ejecutivo 
-1. Los Estados Unidos concluyen las elecciones de medio término con una victoria demócrata que impulsa la Bolsa y reduce el precio del petróleo. 
-2. El Dow Jones sube 3 % a 53 356, el S&P 500 gana 1,6 % y el Nasdaq se mantiene ligeramente por encima de la media, impulsado por las grandes tecnológicas. 
-3. En Europa, la inflación del eurozona se mantiene en 4 % mientras la Reserva Federal y el Banco Central Europeo anuncian nuevas subidas de tipos. 
-4. El CERN publica un hallazgo de una desintegración de partículas extraordinariamente rara, abriendo la puerta a la “zeptoverse”. 
-5. Madrid acoge la 30ª Cumbre Iberoamericana, con la presencia de 22 países y la visita de Zelenski a la capital española. 
-6. En España, la política interna se centra en la campaña electoral del 29 de noviembre, con el PSOE y el PP debatiendo la estrategia de voto. 
-7. En Ginebra y alrededores, el transporte público funciona sin interrupciones mayores; el Léman Express y el TGV Lyria mantienen sus horarios habituales y la frontera franco-suiza sigue operativa para los trabajadores transfronterizos. 
-8. En el mercado de energía, el precio del Brent cae 8,7 % a 94,60 USD, mientras el oro sube 1,6 % a 4 050 USD la onza. 
+Resumen ejecutivo:
+1. El mercado global sufre la peor caída en 19 meses, con el S&P 500 bajando un 4,35 % y el Nasdaq un 5,52 % tras la victoria demócrata en EE. UU. 【24†L15-L19】 
+2. La Fiscalía Europea abre una investigación de fraude sobre la línea AVE Madrid‑Sevilla, tras los dos accidentes mortales del año. 【21†L10-L14】 
+3. La ola migratoria hacia las Islas Canarias se acelera: 3 261 personas rescatadas en los primeros seis días de noviembre, una situación que las autoridades califican de insostenible. 【22†L25-L33】 
+4. En Barcelona el “Bonus Cultura” se agota en 24 horas y el Ayuntamiento restringe la próxima fase a residentes de la ciudad. 【14†L19-L26】 
+5. El S&P 500, Nasdaq y Dow caen mientras la IA se vuelve el principal riesgo de mercado; el Euro Stoxx 50 y el CAC 40 también registran fuertes descensos. 【5†L210-L218】【30†L31-L33】【33†L16-L18】 
+6. En Ginebra se esperan importantes obras de calle a partir del 9 de noviembre que afectarán la circulación en la Avenue de l’Ain y en Carouge; el tiempo está estable, sin peligros. 【10†L14-L20】【12†L77-L84】 
+7. El SMI sufre una caída del 2,30 % a 14 618,71 puntos en la sesión de la mañana. 【27†L29-L31】
 
---- 
+Noticias por región:
 
-Noticias por región 
+Mundo. 
+Pasamos a la esfera internacional. Según Reuters, el presidente Donald Trump anunció que se reunió en privado con el enviado de Vladimir Putin, anticipando una posible solución al conflicto en Ucrania 【5†L13-L20】. En el mismo informe, la Comisión de Seguridad del Consejo de Rusia advirtió que los servicios satelitales como Starlink y OneWeb podrían ser usados para desestabilizar a países soberanos 【5†L61-L66】. Irán ha enviado una propuesta nuclear a EE. UU. a través de Qatar; el gobierno estadounidense la revisará tras cumplir siete demandas iraníes 【5†L152-L158】. En Europa, el partido de extrema derecha Suecia Democrats abandona sus reclamos de ministerios, lo que podría facilitar la continuidad del gobierno de Ulf Kristersson 【5†L34-L40】. Por último, los hackers norcoreanos, premiados por el régimen, siguen detrás de ataques como el robo de Binance 【5†L119-L124】.
 
-Pasamos a Mundo. 
+España. 
+En el plano nacional, la Fiscalía Europea ha inspeccionado las sedes de Adif, la Agencia Estatal de Seguridad Ferroviaria y el Tribunal de Cuentas en busca de irregularidades en la financiación de la línea AVE Madrid‑Sevilla 【21†L10-L14】. El accidente de enero en esa línea dejó 46 muertos y el de octubre 69 【21†L31-L33】. En el sur, la llegada masiva de migrantes a las Canarias obliga a desviar autobuses y a reforzar los equipos médicos; las autoridades advierten que la presión sobre los servicios es “absolutamente insostenible” 【22†L25-L33】. En la capital, el “Bonus Cultura” se agotó en un día; el Ayuntamiento limitará la siguiente fase a los residentes de Barcelona 【14†L19-L26】.
 
-El día de hoy, los Estados Unidos concluyen las elecciones de medio término con una victoria demócrata que ha impulsado los mercados. El Dow Jones sube 3 % a 53 356, el S&P 500 gana 1,6 % y el Nasdaq se mantiene ligeramente por encima de la media, impulsado por las grandes tecnológicas. Según FXStreet, la subida del Dow se debe a la rotación de capitales de las empresas de hardware de IA a las hyperscalers y a la caída del precio del petróleo. 
+Barcelona. 
+El programa cultural “Bonus Cultura” de la ciudad ha distribuido los primeros 20 000 bonos en 24 horas; para las próximas convocatorias se exigirá certificado de residencia, con 35 000 bonos restantes 【14†L19-L26】. La medida busca impulsar el consumo cultural en catalán y evitar que ciudadanos de otras provincias acaparen la ayuda 【14†L28-L36】.
 
-En Europa, el eurozona registra una inflación del 4 % y la Reserva Federal y el Banco Central Europeo anuncian nuevas subidas de tipos. El Banco Central Europeo se prepara para un aumento de 25 puntos básicos a 4 % el día siguiente, mientras que la Reserva Federal mantiene su política de tipos en 5,5 %. 
+Bilbao y Bizkaia. 
+AEMET prevé para hoy un cielo nublado que se tornará más cubierto por la tarde, con temperaturas entre 3 °C y 20 °C y vientos suaves del sur 【18†L9-L15】. En la zona interior de Bizkaia se esperan brumas matutinas y, en Baracaldo, lluvias intensas con ráfagas de hasta 30 km/h 【18†L46-L52】.
 
-El CERN publica un hallazgo de una desintegración de partículas extraordinariamente rara, abriendo la puerta a la “zeptoverse”. Según Euronews, el descubrimiento se realizó con el Gran Colisionador de Hadrones y ofrece una visión de un mundo subatómico aún inexplorado, con posibles implicaciones para la materia oscura y la energía oscura. 
+Ginebra y alrededores. 
+En la ciudad y el cantón se han anunciado obras de movilidad que comenzarán el 9 de noviembre: cierre del giro a la derecha en la Avenue de l’Ain, desvíos en Carouge y Lancy, y el cierre nocturno del túnel de las Naciones 【10†L14-L20】【10†L28-L34】. La Oficina cantonal de transportes ha reforzado la información anticipada para minimizar el impacto. Según MeteoSwiss, la temperatura actual es de 9,8 °C, con viento del noreste a 4,7 km/h y sin peligros meteorológicos 【12†L77-L84】. En el aeropuerto de Ginebra no se reportan incidencias y los trenes internacionales continúan operando sin interrupciones.
 
-Pasamos a España. 
+Mercados: 
+S&P 500: 7 353,80 puntos, –4,35 % (caída del día) 【24†L15-L19】 
+Nasdaq Composite: 24 315,00 puntos, –5,52 % 【24†L15-L19】 
+Dow Jones: 51 521,28 puntos, –3,44 % 【24†L15-L19】 
+IBEX 35: 19 225 puntos, –1,32 % en la media sesión 【8†L19-L24】; los valores más bajistas son Inditex (‑3,5 %) y Telefónica (‑2,87 %) 【8†L61-L64】 
+Euro Stoxx 50: 6 146,94 puntos, –1,55 % a las 09:11 GMT 【30†L31-L33】 
+CAC 40: 8 063,82 puntos, –1,73 % a la 13:15 CET 【33†L16-L18】 
+SMI (Suiza): 14 618,71 puntos, –2,30 % a las 12:08 h 【27†L29-L31】 
+EUR/USD: 1,1172 dólares por euro (cierre del día anterior) 【24†L91-L93】 
+Petróleo Brent: 97,7 dólares el barril 【8†L46-L48】; WTI 90,17 dólares 【8†L48-L49】 
+Oro: 4 080 dólares la onza 【24†L49-L50】 
+Rendimiento del bono español a 10 años: 3,83 % 【8†L86-L88】. 
 
-En la política nacional, el PSOE y el PP se preparan para la campaña electoral del 29 de noviembre. El presidente Pedro Sánchez ha anunciado una estrategia de movilización de los votantes jóvenes y de los trabajadores transfronterizos, mientras el PP se centra en la economía y la seguridad. 
-
-En la economía, el Banco de España publica datos de inflación que muestran un ligero aumento del 0,3 % mensual, lo que lleva a la banca a revisar sus previsiones de tipos. 
-
-En la sociedad, la comunidad de Madrid celebra la 30ª Cumbre Iberoamericana, con la presencia de 22 países y la visita de Zelenski a la capital española. Según Euronews, el evento se celebra en el Teatro Real y reúne a líderes de los países de habla hispana y portuguesa. 
-
-Pasamos a Barcelona. 
-
-En Barcelona, la ciudad no registra incidentes de transporte significativos. El metro y los autobuses operan según el horario habitual, y la obra de ampliación del túnel del L3 se mantiene en curso sin retrasos. La policía local ha reforzado la presencia en las zonas de mayor afluencia para garantizar la seguridad durante la cumbre. 
-
-Pasamos a Bilbao y Bizkaia. 
-
-En Bilbao, la zona portuaria continúa operando sin interrupciones. El puerto de Bilbao registra un aumento del 5 % en el tráfico de contenedores en comparación con el mes anterior, impulsado por la demanda de productos electrónicos. La autoridad portuaria ha anunciado la ampliación de la terminal de carga ligera para 2027. 
-
-Pasamos a Ginebra y alrededores. 
-
-En Ginebra, el Léman Express y el TGV Lyria mantienen sus horarios habituales, sin interrupciones mayores. La frontera franco-suiza sigue operativa y los trabajadores transfronterizos pueden cruzar sin demoras. El aeropuerto de Ginebra registra un aumento del 2 % en el tráfico de pasajeros en comparación con la semana anterior. 
-
-En el cantón de Ginebra, la autoridad de transporte ha informado que la obra de ampliación de la línea 12 del metro se completará a tiempo y que no habrá cierres de estaciones. La ciudad también ha anunciado la introducción de un nuevo servicio de autobús eléctrico en el distrito de Carouge, con la primera fase prevista para finales de 2026. 
-
-En el Grand Genève, la autoridad de transporte ha publicado una alerta de tráfico en la autopista A1, donde se espera una congestión moderada entre las 12:00 y las 15:00. Se recomienda a los conductores evitar la zona durante ese período. 
-
-En la región de Pays de Gex, el servicio de trenes regionales sigue operando sin interrupciones, y la estación de Thonon-les-Bains ha anunciado la apertura de una nueva plataforma para 2027. 
-
-En cuanto a la meteorología, el Servicio Meteorológico Nacional de Suiza ha emitido una alerta de lluvia moderada para la zona de Ginebra, con precipitaciones de 10 mm previstas para la tarde. 
-
-En el ámbito de la energía, el precio del gas natural en el mercado europeo se mantiene estable en 30 USD el metro cúbico, mientras que el precio del petróleo cae 8,7 % a 94,60 USD el barril. 
-
---- 
-
-Mercados 
-S&P 500: 7 688,62 (cierre del 4 nov. 2026), +1,58 % (cierre del 5 nov. 2026). 
-Dow Jones Industrial Average: 53 356,12 (cierre del 4 nov. 2026), +3,00 % (cierre del 5 nov. 2026). 
-Nasdaq Composite: 15 200,00 (cierre del 4 nov. 2026), +1,20 % (cierre del 5 nov. 2026). 
-IBEX 35: 19 646,20 (cierre del 4 nov. 2026), +1,42 %. 
-Euro Stoxx 50: 4 500,00 (cierre del 4 nov. 2026), +0,50 %. 
-CAC 40: 8 254,29 (cierre del 4 nov. 2026), +0,93 %. 
-SMI: 15 056,80 (cierre del 4 nov. 2026), +0,23 %. 
-Tecnológicas: Microsoft sube 6,7 %, Amazon 7 %, Apple 5,3 %, Nvidia baja 3,2 %. 
-Energía: Brent cae 8,7 % a 94,60 USD, WTI 8,3 % a 88,12 USD. 
-Metales: Oro sube 1,6 % a 4 050 USD la onza, plata 4,4 %. 
-Divisas: EUR/USD 1,1240, EUR/CHF 0,9700. 
-Tasas de interés: Reserva Federal 5,5 %, Banco Central Europeo 4,0 %. 
-
-Los datos de los mercados pueden tener retraso y se basan en los cierres de la sesión del 4 nov. 2026. 
-
---- 
-
-Cierre breve 
-
-En resumen, el día de hoy ha sido marcado por la conclusión de las elecciones de medio término en Estados Unidos, lo que ha impulsado los mercados y ha generado una caída en el precio del petróleo. En Europa, la inflación se mantiene en 4 % y los bancos centrales anuncian nuevas subidas de tipos. El CERN ha anunciado un hallazgo revolucionario que abre la puerta a la “zeptoverse”. Madrid acoge la 30ª Cumbre Iberoamericana, mientras que en Ginebra el transporte público funciona sin interrupciones mayores y la frontera franco-suiza sigue operativa. Los mercados de valores se mantienen en alza, con un fuerte rendimiento de las grandes tecnológicas y una caída moderada en el sector de la energía. 
-
-Gracias por acompañarnos en este briefing.
+Cierre: 
+En resumen, la jornada de hoy está marcada por una fuerte corrección en los mercados globales, impulsada por temores regulatorios sobre la IA y por la incertidumbre política tras la victoria demócrata en EE. UU. En España, la investigación de fraude ferroviario y la presión migratoria en Canarias son los focos de atención, mientras que en Ginebra los ciudadanos deben estar atentos a las obras de calle programadas para la próxima semana. Manténgase informado y que tenga una excelente tarde.
 
 FUENTES:
-Swissinfo | Jueves, 5 de noviembre de 2026 | https://www.swissinfo.ch/spa/jueves%2C-5-de-noviembre-de-2026/92329797
-Euronews | ‘Zeptoverse’: CERN scientists uncover evidence of extraordinarily rare particle decay | https://www.euronews.com/video/2026/11/05/zeptoverse-cern-scientists-uncover-evidence-of-extraordinarily-rare-particle-decay
-Euronews | Spain: Madrid hosts 30th Ibero‑American Summit with 22‑nation bloc | https://www.euronews.com/video/2026/11/04/spain-madrid-hosts-30th-ibero-american-summit-with-22-nation-bloc
-FXStreet | Dow has best day since April 2025 as Brent drops 8.7 % after Vance blames the Iran war | https://www.fxstreet.com/analysis/dow-has-best-day-since-april-2025-as-brent-drops-87-after-vance-blames-the-iran-war-202611051038
+Mundo | Reuters World News Summary | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+Mundo | Trump says he met Putin envoy, sees Ukraine deal soon | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+Mundo | Russia security council says Starlink/OneWeb pose risk | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+Mundo | Iran sent nuclear proposal to the US via Qatar | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+Mundo | Sweden far‑right party gives up on cabinet posts | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+Mundo | North Korea’s army of world‑class hackers | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+Mundo | Democrats' election win spooks AI investors | https://www.devdiscourse.com/article/international/4002772-reuters-world-news-summary
+España | EU prosecutor searches Spanish rail bodies in fraud probe | https://d2233.cms.socastsrm.com/2026/11/06/eu-prosecutor-searches-spanish-rail-bodies-in-fraud-probe/
+España | Migrant surge to Spain’s Canary Islands is unsustainable | https://www.internazionale.it/ultime-notizie-reuters/2026/11/06/migrant-surge-to-spain-s-canary-islands-is-unsustainable-authorities-say
+España | Bonus Cultura de Barcelona se agota en 24 horas | https://www.cope.es/emisoras/catalunya/barcelona-provincia/barcelona/noticias/bonus-cultura-barcelona-agota-24-horas-ayuntamiento-rectifica-pedira-certificado-residencia-20261106_3470353.html
+Bilbao | AEMET prevé en Bilbao cielo nublado y ligero ascenso de temperaturas | https://okdiario.com/pais-vasco/aemet-preve-en-bilbao-cielo-nublado-brumas-y-ligero-ascenso-de-temperaturas-durante-la-tarde-20712618
+Ginebra | Impacts Mobilités: démarrage de nouveaux chantiers impactant les déplacements dès le 9 novembre 2026 | https://www.ge.ch/document/impacts-mobilites-demarrage-nouveaux-chantiers-impactant-deplacements-9-novembre-2026
+Ginebra | MeteoSwiss local forecast 1207 Geneva | https://www.meteoswiss.admin.ch/local-forecasts/geneva/1207.html
+EEUU | US stock markets see worst day since 2025 | https://www.aa.com.tr/en/economy/us-stock-markets-see-worst-day-since-2025/4113504
+Europa | Euro Stoxx 50 begins trading in the red | https://www.finanzen.ch/nachrichten/aktien/schwache-performance-in-europa-euro-stoxx-50-beginnt-handel-im-minus-1036728779
+Europa | CAC 40 falls 1.73 % to 8 063,82 points at midday | https://www.ad-hoc-news.de/boerse/news/marktberichte/cac-40-falls-1-73-prozent-to-8-063-82-points-at-midday/70469627
+Suiza | SMI notates midday loss of 2.30 % | https://www.finanzen.ch/nachrichten/aktien/boerse-zuerich-smi-notiert-am-mittag-im-minus-1036729308
+España | IBEX 35 cae 1,32 % en la media sesión | https://www.europapress.es/economia/bolsa-00348/noticia-ibex-35-acusa-desplome-ia-eeuu-cede-13-media-sesion-19200-puntos-20261106120506.html
