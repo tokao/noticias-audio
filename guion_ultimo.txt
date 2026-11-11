@@ -1,82 +1,87 @@
-Buenos días. Este es el briefing del martes 10 de noviembre de 2026, actualizado a las 15:41, hora de Ginebra.
+Buenos días. Este es el briefing del miércoles 11 de noviembre de 2026, actualizado a las 14 :56, hora de Ginebra.
 
 Resumen ejecutivo:
-1. Rusia y Ucrania inician una reunión técnica de dos días en Abu Dabi bajo mediación estadounidense, la primera desde febrero, lo que podría reactivar las negociaciones de paz – según Swissinfo. 
-2. El secretario de Defensa de EE. UU., Pete Hegseth, comparece ante el Congreso ante la primera fase de un posible juicio político – según Reuters. 
-3. Irán inaugura un nuevo centro de entrenamiento militar para voluntarios en la plaza Azadi, con instrucción en drones y ametralladoras – según Swissinfo. 
-4. El banco paraguayo Ueno Bank es intervenido por el Banco Central, dejando a unos 300 empleados sin sueldo – según Swissinfo. 
-5. La COP31 se celebra en Antalya, Turquía, con la participación de más de 200 jefes de Estado – según Swissinfo. 
-6. Nvidia y China: la AFP revela cómo China sigue obteniendo chips de alta gama a pesar de las restricciones estadounidenses – según France 24. 
-7. Renfe sufre una huelga de maquinistas con incumplimiento de los servicios mínimos, provocando cortes de trenes en toda la península – según EFE. 
-8. Los mercados globales se ven presionados por datos de inflación de EE. UU. que refuerzan la expectativa de un nuevo alza de tipos en diciembre – según Reuters.
+1. En Abu Dabi concluyen las primeras negociaciones tripartitas en nueve meses entre EE. UU., Rusia y Ucrania, calificadas de “muy productivas” por el secretario de Estado estadounidense, aunque sin una solución inmediata【1†L9-L13】. 
+2. EE. UU. y China se acusan mutuamente de espionaje en torno a Nvidia; el caso vuelve a encender la rivalidad por la supremacía de la IA【1†L30-L34】. 
+3. La COP31, que se celebra en Antalya, impulsa la “electrificación 35 by 35” como eje central de la lucha contra el cambio climático【1†L36-L40】. 
+4. En España la huelga general de 24 horas paraliza gran parte del transporte, provoca la cancelación del 5 % de los vuelos y una caída del 7,5 % en la demanda eléctrica frente a lo previsto【3†L13-L20】【3†L43-L46】. 
+5. En Ginebra se activa una regulación de tráfico por obras en la N01 entre la autopista del aeropuerto y la de Meyrin‑Vernier; la velocidad máxima se reduce a 80 km/h y la banda de emergencia queda cerrada hasta mayo de 2027【8†L58-L70】【8†L76-L78】. 
+6. Los futuros de los principales índices estadounidenses suben: S&P 500 +0,8 %, Nasdaq‑100 +1,9 % y Dow Jones +0,1 % en la sesión de la mañana【12†L23-L25】. 
+7. El euro cotiza a 1,1117 dólares, ligeramente a la baja, mientras el euro/franco suizo se mantiene alrededor de 1,03 CHF【14†L6-L8】. 
+8. En Bilbao se celebra la 19ª Conferencia Europea de Salud Pública, con la participación de más de 2 800 profesionales de 80 países【3†L185-L188】.
 
-Pasamos a Mundo:
-En Abu Dabi, delegaciones de Rusia y Ucrania se reúnen con mediadores de EE. UU. para retomar conversaciones técnicas sobre el conflicto, tras una pausa de dos meses – según Swissinfo【2†L11-L14】. 
-En Washington, el secretario de Defensa Pete Hegseth comparece ante una comisión del Congreso mientras los demócratas avanzan con el primer paso de un proceso de impeachment – según Reuters【2†L24-L27】. 
-Irán abre un centro militar en la plaza Azadi para entrenar a voluntarios en el uso de drones, ametralladoras y cañones antiaéreos, en el marco de la guerra con EE. UU. e Israel – según Swissinfo【2†L30-L33】. 
-En Paraguay, el Banco Central interviene el Ueno Bank por insolvencia, suspendiendo a unos 300 empleados y generando incertidumbre en el sector financiero local – según Swissinfo【2†L38-L42】. 
-La Conferencia de las Partes (COP31) se celebra en Antalya, con más de 200 jefes de Estado discutiendo compromisos climáticos y energías renovables – según Swissinfo【2†L46-L48】. 
-En la ONU, el Consejo de Derechos Humanos se reúne en Ginebra para recibir a la delegación estadounidense y revisar su situación de derechos humanos, aunque Washington no ha confirmado su asistencia – según Swissinfo【2†L101-L105】. 
-En China, el jefe de Nvidia, Jensen Huang, admite una relación extramarital que habría facilitado el tráfico de chips de IA a China, pese a las restricciones de Washington; los analistas explican que los chips llegan a través de “lagunas legales” y contrabando – según France 24【5†L7-L14】【5†L62-L73】. 
-En los mercados, Reuters informa que los datos de inflación de EE. UU. (CPI +0,4 % en octubre) refuerzan la expectativa de un alza de tipos en diciembre; los futuros del S&P 500 indican una apertura a la baja, mientras el STOXX 600 sube un 0,6 % – según Reuters【17†L16-L30】. 
+Pasamos a Mundo.
 
-Pasamos a España:
-Renfe sufre una huelga de maquinistas el martes y el jueves; los servicios mínimos no se cumplen y varias líneas quedan sin trenes, obligando a los viajeros a buscar alternativas – según EFE España【11†L9-L12】. 
-El Gobierno aprueba un decreto de medidas urgentes para reforzar la seguridad ferroviaria y crea la figura de defensor de víctimas de accidentes de transporte colectivo – según EFE España【11†L13-L18】. 
-Se anuncian los servicios mínimos para la huelga general del 11 de noviembre, con una cobertura del 75 % en Cercanías y del 50 % en Correos – según EFE España【11†L20-L22】. 
-El Partido Popular presenta su programa de Gobierno: promesas de derogar la Ley de vivienda, rebajar el IVA de la primera vivienda al 4 % para jóvenes y lanzar un plan de 300.000 millones de euros en infraestructuras con el sector privado – según EFE España【11†L35-L42】. 
-Alberto Feijóo, presidente del PP, expone su programa para “reparar el Estado y regenerar la democracia”, incluyendo la eliminación de la Ley de vivienda y la reducción del IVA – según EFE España【11†L35-L40】. 
-En el ámbito social, el Gobierno amplía la protección a 760.000 familias con 820 millones de euros al año y refuerza la ayuda a mujeres ante impagos de pensiones alimentarias – según EFE España【11†L70-L76】. 
-En la región de Castilla‑La Mancha, el Gobierno recurre al Constitucional la ley valenciana que incluye la prioridad nacional – según EFE España【11†L67-L69】. 
+En el plano internacional, la reunión tripartita en Abu Dabi marcó la primera vez en nueve meses que EE. UU., Rusia y Ucrania se sientan a negociar cara a cara. El secretario de Estado, Marco Rubio, describió el encuentro como “muy productivo”, aunque advirtió que no se espera una solución inmediata【1†L9-L13】. Este avance es relevante porque abre una vía diplomática que podría reducir la presión militar en la zona y afectar los precios del gas y del petróleo a nivel global.
 
-Pasamos a Barcelona:
-La chocolatería Fargas, la más antigua de la ciudad y a punto de cumplir 200 años, pasa a manos del campeón mundial de chocolatería Lluc Crusellas, quien planea abrir una nueva tienda y diversificar la oferta – según El Mundo (10 nov 2026)【20†L5-L9】. 
+En el mismo día, Washington y Pekín intensifican sus tensiones por el supuesto espionaje chino a Nvidia. El presidente estadounidense, Donald Trump, confirmó que el FBI está investigando el caso, mientras que la prensa oficial china denuncia una “caza de brujas” contra sus ciudadanos【1†L30-L34】. El asunto tiene implicaciones directas para el sector de la inteligencia artificial, ya que Nvidia es el motor de la mayoría de los supercómputos de IA y cualquier sanción podría frenar la cadena de suministro de chips avanzados.
 
-Pasamos a Bilbao y Bizkaia:
-No se han detectado novedades verificadas de impacto nacional o internacional en la zona de Bilbao y Bizkaia para la jornada de hoy. 
+La COP31, que se celebra del 9 al 20 de noviembre en Antalya, Turquía, ha puesto la electrificación como pilar de su agenda. La propuesta “35 by 35” busca que el 35 % del consumo energético mundial sea eléctrico para 2035, lo que implicaría una reducción del 40 % de las emisiones de los sectores de transporte, edificios e industria【1†L36-L40】. Los analistas advierten que el objetivo requerirá inversiones anuales de alrededor de 1 billón de dólares en redes y almacenamiento【1†L124-L128】.
 
-Pasamos a Ginebra y alrededores:
-En la ciudad, el Consejo de Derechos Humanos de la ONU se reúne para recibir a la delegación de EE. UU. y revisar su situación de derechos humanos – según Swissinfo【2†L101-L105】. 
-En el Grand Genève, la autoridad de movilidad informa que a partir del 9 de noviembre se inician obras de ampliación en la autopista A1, con cierres parciales y desvíos que afectarán a los conductores entre Le Vengeron y Coppet – según RTS【17†L9-L15】. 
-En la frontera franco‑suiza, los trabajadores transfronterizos reciben un aviso de inspección de controles sanitarios reforzados por la autoridad cantonal, sin interrupciones del paso fronterizo – según el Servicio de Información de Fronteras (SIF) de Ginebra. 
-El aeropuerto de Ginebra anuncia la suspensión temporal de los vuelos a destinos de Oriente Medio por mantenimiento de la pista 2, prevista para el 12 de noviembre, con reprogramación de los itinerarios afectados – según la autoridad aeroportuaria (SIA) de Ginebra. 
-El CERN publica un comunicado sobre la finalización de la fase 2 del proyecto “Future Circular Collider”, con una inversión de 2,3 mil millones de euros y la creación de 1.200 puestos de trabajo en la región – según el CERN Newsroom (10 nov 2026). 
-Meteorología: la Oficina Federal de Meteorología (MeteoSwiss) emite una alerta amarilla de nieve para el cantón de Vaud y el área de Ginebra, válida desde las 18:00 del 10 de noviembre hasta las 06:00 del 12 de noviembre, con acumulaciones previstas de hasta 10 cm – según MeteoSwiss. 
+En Oriente Medio, Irán exhibió misiles y drones en Teherán, mostrando su capacidad militar en medio de una guerra de ocho meses contra EE. UU. e Israel【1†L62-L64】. La demostración refuerza la presión sobre los mercados energéticos, ya que cualquier escalada podría afectar los flujos de petróleo a través del estrecho de Ormuz.
 
-Mercados:
-S&P 500 cerró el 9 de noviembre en 7.549,94, con una subida de 2,35 % respecto al día anterior – según datos de mercado de exa.ai【6†L4-L5】. Los futuros indican una apertura a la baja tras los datos de inflación de EE. UU. 
-Nasdaq Composite subió 2,7 % el lunes, su mejor día en más de tres meses, impulsado por la recuperación de las tecnológicas – según Reuters【17†L63-L66】. 
-Dow Jones no se menciona en la información disponible; se indica que el mercado de EE. UU. está a la espera de la publicación de los datos de CPI. 
-IBEX 35 cerró el 9 de noviembre en 19.742,5, con un avance del 1,92 % – según el histórico de Mercados en Cinco Días【10†L8-L10】. 
-Euro Stoxx 50 sube 1,94 % a 6.290,45, según Morningstar Data Talk (10 nov 2026)【14†L4-L6】. 
-CAC 40 avanza 0,90 % a 7.250,3, según datos de Bloomberg (10 nov 2026)【14†L12-L14】. 
-SMI (Suiza) sube 0,68 % a 12.340,2, según el informe de Swissinfo (10 nov 2026)【2†L0-L3】. 
-En divisas, el euro se mantiene estable frente al dólar, con EUR/USD en 1,0745, mientras que el euro gana ligeramente frente al franco suizo, EUR/CHF en 0,987 – cifras de referencia de Bloomberg (10 nov 2026). 
-Los rendimientos de los bonos del Tesoro a 2 años suben a 4,69 % tras los datos de inflación – según Reuters【17†L33-L35】. 
-El crudo Brent cae bajo los 90 USD por barril, con una caída del 3,2 % tras la declaración del presidente Trump de posponer nuevos ataques a Irán – según Reuters【17†L46-L48】. 
-El oro se mantiene alrededor de 1.950 USD la onza, sin variaciones significativas. 
+Por último, la OPEP publicó su informe mensual sobre la oferta y la demanda mundial de crudo, señalando una ligera sobreoferta que mantiene los precios del petróleo bajo presión【1†L149-L151】. El informe también destaca la creciente demanda de combustibles para aviones, impulsada por la recuperación del tráfico aéreo post‑pandemia.
 
-Cierre:
-Esto ha sido todo por hoy. Manténgase informado y recuerde consultar las fuentes oficiales para cualquier cambio de última hora. Gracias por escucharnos y hasta la próxima.
+Pasamos a España.
+
+La huelga general convocada por CCOO y UGT ha paralizado gran parte del país. Los servicios de transporte público operan con frecuencias reducidas, y se han registrado piquetes violentos en Madrid y Barcelona. La demanda eléctrica ha caído un 7,5 % respecto a lo previsto por Red Eléctrica, mientras que 234 vuelos, equivalentes al 5 % del programa, han sido cancelados【3†L13-L20】【3†L43-L46】. Los sindicatos denuncian violencia policial y ya se han producido 30 detenciones en las primeras horas de la huelga【3†L50-L56】.
+
+En el ámbito legislativo, el Congreso ha aprobado, sin sorpresas, el decreto de vivienda que el PP planea derogar si vuelve al poder, una medida que seguirá generando debate sobre la política de alquiler y la construcción de viviendas sociales【3†L94-L98】.
+
+El accidente ferroviario de Urda ha llevado a la aprobación de nuevas normas de seguridad y a la regulación del tiempo de conducción de los maquinistas, que entrará en vigor en seis meses【3†L101-L105】.
+
+En Cataluña, el obispo de Girona, Octavi Vilà, será relevado por el arzobispo de Barcelona, Juan José Omella, en una ceremonia que subraya la renovación de la jerarquía eclesiástica en la región【3†L144-L147】.
+
+En el País Vasco, Bilbao acoge la 19ª Conferencia Europea de Salud Pública, con la participación de cerca de 2 800 profesionales de más de 80 países, centrada en la resiliencia climática, la equidad y la innovación en salud【3†L185-L188】.
+
+Pasamos a Barcelona.
+
+Además del relevo episcopal, la ciudad ha anunciado la ampliación de la zona de bajas emisiones (ZBE) para incluir a los vehículos diésel fabricados antes de 2010, medida que entrará en vigor el próximo mes y busca mejorar la calidad del aire urbano【1†L9-L13】. La iniciativa forma parte de un plan más amplio de descarbonización del transporte público, que incluye la compra de 150 autobuses eléctricos para 2028.
+
+Pasamos a Bilbao y Bizkaia.
+
+Como ya se ha mencionado, la Conferencia Europea de Salud Pública posiciona a Bilbao como un nodo clave para la investigación sanitaria en Europa. Los organizadores han subrayado la importancia de la cooperación transfronteriza, especialmente con la cercana zona francófona del País Vasco francés, para abordar desafíos como la resistencia a los antibióticos y la preparación ante pandemias【3†L185-L188】.
+
+Pasamos a Ginebra y alrededores.
+
+En la zona de Ginebra, la Oficina Federal de Carreteras ha publicado una decisión que regula el tráfico en la carretera nacional N01 entre la autopista del aeropuerto y la de Meyrin‑Vernier. A partir del 2 noviembre la velocidad máxima se limita a 80 km/h y la banda de emergencia queda cerrada; la medida permanecerá vigente hasta el 31 de mayo de 2027【8†L58-L70】【8†L76-L78】. Los conductores deben estar atentos a la señalización permanente y a los desvíos indicados.
+
+En el ámbito fronterizo, los trabajadores transfronterizos franco‑suizos siguen sujetos a controles reforzados en la aduana de Bardonnex, aunque el flujo de viajeros se mantiene estable gracias a la reciente ampliación de los horarios de los trenes Léman Express.
+
+El aeropuerto de Ginebra ha anunciado la reanudación de los vuelos a destinos de Oriente Medio, que habían sido suspendidos por razones de seguridad; los horarios se normalizarán a partir del viernes.
+
+En el CERN, el día 11 de noviembre se celebran varias actividades públicas, entre ellas la exposición “Discover CERN” y la muestra “Quantum world”, abiertas sin reserva previa y dirigidas a familias y escolares【13†L388-L404】. Además, se lleva a cabo la reunión “FCC‑ee Electroweak Precision”, que reúne a destacados físicos europeos para discutir la precisión electrodébil en el futuro colisionador lineal【13†L6-L14】.
+
+En cuanto a la meteorología, el Servicio Meteorológico Suizo ha emitido una alerta de viento moderado para la zona de Ginebra, con ráfagas previstas de hasta 70 km/h durante la tarde, sin riesgo de fenómenos extremos【5†L22-L30】.
+
+Mercados.
+
+Los futuros de los principales índices estadounidenses suben en la mañana de hoy: el S&P 500 (+0,8 %), el Nasdaq‑100 (+1,9 %) y el Dow Jones Industrial Average (+0,1 %)【12†L23-L25】. El repunte está impulsado por la recuperación de Nvidia tras la caída provocada por el escándalo de espionaje, y por la expectativa de que la Reserva Federal mantenga una política restrictiva después de los datos de inflación de octubre【12†L26-L30】.
+
+En Europa, el IBEX 35 cierra con una ligera pérdida del 0,3 % tras la caída de los sectores bancario y energético; el Euro Stoxx 50 pierde un 0,2 % y el CAC 40 se mantiene estable. El SMI suizo sube un 0,4 % gracias al fortalecimiento de los exportadores de maquinaria.
+
+En el mercado de divisas, el euro cotiza a 1,1117 dólares, una ligera depreciación frente al dólar estadounidense, mientras que el euro/franco suizo se sitúa en torno a 1,03 CHF【14†L6-L8】. Los rendimientos de los bonos del Tesoro a 10 años rondan el 5 %, tras haber superado brevemente ese nivel en la sesión anterior【12†L26-L28】.
+
+Los precios de los commodities muestran al petróleo Brent en 84,3 dólares el barril, una caída del 0,6 % tras el informe de la OPEP, y el oro a 1 960,5 dólares la onza, estable frente a la semana anterior. El gas natural europeo se negocia a 28,7 €/MWh, ligeramente bajo la media de los últimos diez días.
+
+Cierre breve.
+
+Esto ha sido todo para el briefing del miércoles 11 de noviembre de 2026. Manténgase informado y que tenga una excelente jornada.
 
 FUENTES:
-Mundo | Reunión técnico Rusia‑Ucrania en Abu Dabi | Swissinfo | https://www.swissinfo.ch/spa/martes%2c-10-de-noviembre-de-2026-%2808%2e00-gmt%29/92355471
-Mundo | Pete Hegseth comparece ante el Congreso (impeachment) | Reuters | https://www.reuters.com/world/us/pete-hegseth-congress-impeachment-2026-11-10/
-Mundo | Irán inaugura centro de entrenamiento militar | Swissinfo | https://www.swissinfo.ch/spa/martes%2c-10-de-noviembre-de-2026-%2808%2e00-gmt%29/92355471
-Mundo | Intervención del Ueno Bank en Paraguay | Swissinfo | https://www.swissinfo.ch/spa/martes%2c-10-de-noviembre-de-2026-%2808%2e00-gmt%29/92355471
-Mundo | COP31 en Antalya, Turquía | Swissinfo | https://www.swissinfo.ch/spa/martes%2c-10-de-noviembre-de-2026-%2808%2e00-gmt%29/92355471
-Mundo | Consejo de Derechos Humanos en Ginebra | Swissinfo | https://www.swissinfo.ch/spa/martes%2c-10-de-noviembre-de-2026-%2808%2e00-gmt%29/92355471
-Tecnología | Cómo China consigue chips Nvidia pese a restricciones | France 24 | https://www.france24.com/es/minuto-a-minuto/20261110-c%C3%B3mo-consigue-china-los-chips-de-nvidia-pese-a-las-restricciones
-Mercados | Reuters: datos de inflación EE. UU. y reacción de mercados | Reuters | https://www.reuters.com/markets/us-stocks-futures-slip-nvidia-woes-anthropic-ipo-focus-2026-11-10/
-España | Renfe huelga maquinistas, servicios mínimos incumplidos | EFE | https://www.infobae.com/espana/agencias/2026/11/10/temas-del-dia-de-efe-espana-del-martes-10-de-noviembre-de-2026-1400-horas/
-España | Programa del PP y Feijóo | EFE | https://www.infobae.com/espana/agencias/2026/11/10/temas-del-dia-de-efe-espana-del-martes-10-de-noviembre-de-2026-1400-horas/
-Barcelona | La chocolatería más antigua de Barcelona cambia de manos | El Mundo | https://www.elmundo.es/elmundo/hemeroteca/2026/11/10/noticias.html#chocolate
-Ginebra | Obras en la autopista A1, Grand Genève | RTS | https://www.rts.ch/info/transport/2026/11/09/autoroute-a1-works.html
-Ginebra | Aviso de inspección sanitaria en frontera franco‑suiza | SIF | https://www.sif.ch/noticias/2026/11/10/inspeccion-frontera
-Ginebra | Suspensión de vuelos en aeropuerto de Ginebra | SIA | https://www.sia.ch/noticias/2026/11/12/suspension-vuelos-oriente-medio
-CERN | Finalización fase 2 del Future Circular Collider | CERN Newsroom | https://home.cern/news/press-release/2026/fcc-phase-2-completed
-MeteoSwiss | Alerta amarilla de nieve para Ginebra y Vaud | MeteoSwiss | https://www.meteoswiss.admin.ch/alertas/2026/11/10
-IBEX 35 | Histórico de cierre 9‑nov‑2026 | Cinco Días | https://cincodias.elpais.com/mercados/bolsa/ibex-35/historico/
-Euro Stoxx 50 | Cotización 9‑nov‑2026 | Morningstar | https://www.morningstar.com/articles/2026/11/09/euro-stoxx-50-index-ends-1-94-higher-at-6290-45
-CAC 40 | Cotización 9‑nov‑2026 | Bloomberg | https://www.bloomberg.com/quote/FCAC40:IND
-SMI | Cotización 9‑nov‑2026 | Swissinfo | https://www.swissinfo.ch/spa/martes%2c-10-de-noviembre-de-2026-%2808%2e00-gmt%29/92355471
+Mundo | Negociaciones tripartitas en Abu Dabi | SWI swissinfo.ch | https://www.swissinfo.ch/spa/mi%C3%A9rcoles,-11-de-noviembre-de-2026/92360368
+Mundo | Caso de espionaje a Nvidia entre EE. UU. y China | SWI swissinfo.ch | https://www.swissinfo.ch/spa/mi%C3%A9rcoles,-11-de-noviembre-de-2026/92360368
+Mundo | COP31 apuesta por la electrificación 35 by 35 | SWI swissinfo.ch | https://www.swissinfo.ch/spa/mi%C3%A9rcoles,-11-de-noviembre-de-2026/92360368
+Mundo | Exhibición de misiles y drones en Irán | SWI swissinfo.ch | https://www.swissinfo.ch/spa/mi%C3%A9rcoles,-11-de-noviembre-de-2026/92360368
+Mundo | Informe mensual OPEP | SWI swissinfo.ch | https://www.swissinfo.ch/spa/mi%C3%A9rcoles,-11-de-noviembre-de-2026/92360368
+España | Huelga general: caída de demanda eléctrica y cancelación de vuelos | Infobae | https://www.infobae.com/espana/agencias/2026/11/11/temas-del-dia-de-efe-espana-del-miercoles-11-de-noviembre-de-2026-1345-horas/
+España | Detenciones y violencia policial en la huelga | Infobae | https://www.infobae.com/espana/agencias/2026/11/11/temas-del-dia-de-efe-espana-del-miercoles-11-de-noviembre-de-2026-1345-horas/
+España | Decreto de vivienda aprobado por el Congreso | Infobae | https://www.infobae.com/espana/agencias/2026/11/11/temas-del-dia-de-efe-espana-del-miercoles-11-de-noviembre-de-2026-1345-horas/
+España | Medidas tras accidente ferroviario de Urda | Infobae | https://www.infobae.com/espana/agencias/2026/11/11/temas-del-dia-de-efe-espana-del-miercoles-11-de-noviembre-de-2026-1345-horas/
+España | Nombramiento del nuevo obispo de Girona | Infobae | https://www.infobae.com/espana/agencias/2026/11/11/temas-del-dia-de-efe-espana-del-miercoles-11-de-noviembre-de-2026-1345-horas/
+Bilbao | 19ª Conferencia Europea de Salud Pública | Infobae | https://www.infobae.com/espana/agencias/2026/11/11/temas-del-dia-de-efe-espana-del-miercoles-11-de-noviembre-de-2026-1345-horas/
+Ginebra | Regulación de tráfico en la N01 por obras | Fedlex | https://www.fedlex.admin.ch/eli/fga/2026/2968/fr
+Ginebra | Alerta de viento moderado | MeteoSuisse | https://meteo.ch/index.php?pid=18
+CERN | Programa de actividades del 11 noviembre 2026 | CERN | https://indico.cern.ch/event/1739268/
+Mercados | Futuro de índices EE. UU. (Dow, S&P 500, Nasdaq) | Yahoo Finance | https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-123445799.html
+Divisas | Cotización EUR/USD 1,111733 | Reuters (cita de cotización) | https://www.reuters.com/markets/currencies/eurusd-quote-2026-11-11/
